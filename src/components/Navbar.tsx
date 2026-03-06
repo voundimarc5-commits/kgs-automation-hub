@@ -31,7 +31,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
         <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }} className="flex items-center gap-2">
-          <img src={logo} alt="KGS Automations" className="h-10" />
+          <img src={logo} alt="KGS Automations" className="h-14 md:h-16 animate-logo-pulse" />
         </a>
 
         {/* Desktop */}

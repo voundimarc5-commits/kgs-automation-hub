@@ -195,7 +195,7 @@ const OfferDetail = () => {
             {/* CTA */}
             <div className="text-center">
               <a
-                href="https://wa.me/message/YOUR_WHATSAPP_LINK"
+                href="mailto:contact@koraglobalsystems.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-10 py-4 rounded-xl text-lg font-bold hover:opacity-90 transition-opacity glow-box"

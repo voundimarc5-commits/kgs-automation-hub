@@ -141,7 +141,7 @@ const OfferDetail = () => {
         { icon: Shield, label: t("Nothing falls through the cracks", "Plus rien ne passe entre les mailles") },
       ],
       scenario: {
-        title: t("A week with automation", "Une semaine avec l'automatisation"),
+        title: t("A week with KGS", "Une semaine avec KGS"),
         before: t("Before: You forgot to follow up with 3 clients this week. One appointment was missed. You spent Sunday evening catching up on admin work.", "Avant : Vous avez oublié de relancer 3 clients cette semaine. Un rendez-vous a été manqué. Vous avez passé le dimanche soir à rattraper le travail administratif."),
         after: t("After: Every client received a follow-up. All appointments were confirmed. You got a clean weekly report on Monday morning. Weekend free.", "Après : Chaque client a reçu une relance. Tous les rendez-vous ont été confirmés. Vous avez reçu un rapport hebdomadaire clair lundi matin. Week-end libre."),
       },

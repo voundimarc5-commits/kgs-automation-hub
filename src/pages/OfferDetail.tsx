@@ -153,18 +153,18 @@ const OfferDetail = () => {
     "property-management": {
       icon: Home,
       image: airbnbImg,
-      name: t("Automated Property Management", "Gestion Locative Automatisée"),
+      name: t("Smart Property Management", "Gestion Locative Intelligente"),
       shortDesc: t(
         "Manage your rental properties remotely without stress.",
         "Gérez vos propriétés locatives à distance sans stress."
       ),
       problem: t(
-        "You manage one or more rental properties — Airbnb, short-term lets, or traditional rentals. Guests send repetitive questions about check-in, WiFi, house rules. You're constantly on your phone, sometimes at 2 AM, handling messages that could be automated.",
-        "Vous gérez une ou plusieurs propriétés locatives — Airbnb, locations courte durée ou locations traditionnelles. Les hôtes envoient des questions répétitives sur le check-in, le WiFi, le règlement. Vous êtes constamment sur votre téléphone, parfois à 2h du matin, à gérer des messages qui pourraient être automatisés."
+        "You manage one or more rental properties — Airbnb, short-term lets, or traditional rentals. Guests send repetitive questions about check-in, WiFi, house rules. You're constantly on your phone, sometimes at 2 AM, handling messages that could be handled by a system.",
+        "Vous gérez une ou plusieurs propriétés locatives — Airbnb, locations courte durée ou locations traditionnelles. Les hôtes envoient des questions répétitives sur le check-in, le WiFi, le règlement. Vous êtes constamment sur votre téléphone, parfois à 2h du matin, à gérer des messages qu'un système pourrait traiter."
       ),
       solution: t(
-        "We set up a complete guest communication and property management automation. From booking confirmation to post-checkout review requests — everything runs on autopilot while you focus on growing your portfolio.",
-        "Nous mettons en place une automatisation complète de la communication avec les hôtes et de la gestion locative. De la confirmation de réservation à la demande d'avis après le départ — tout fonctionne en pilote automatique pendant que vous vous concentrez sur le développement de votre portefeuille."
+        "We set up a complete guest communication and property management solution. From booking confirmation to post-checkout review requests — everything runs on autopilot while you focus on growing your portfolio.",
+        "Nous mettons en place une solution complète de communication avec les hôtes et de gestion locative. De la confirmation de réservation à la demande d'avis après le départ — tout fonctionne en pilote automatique pendant que vous vous concentrez sur le développement de votre portefeuille."
       ),
       gains: [
         t("Less repetitive guest messages to handle", "Moins de messages répétitifs à gérer"),

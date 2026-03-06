@@ -124,7 +124,7 @@ const OfferDetail = () => {
       ],
       useCases: [
         { title: t("Catering Service", "Service Traiteur"), desc: t("Orders come from WhatsApp, Instagram, and calls. The system centralizes everything and sends reminders before each event.", "Les commandes arrivent de WhatsApp, Instagram et par téléphone. Le système centralise tout et envoie des rappels avant chaque événement.") },
-        { title: t("Cleaning Business", "Entreprise de Nettoyage"), desc: t("Regular clients need scheduled visits. Automation tracks schedules, sends reminders, and follows up after each service.", "Les clients réguliers ont besoin de visites planifiées. L'automatisation suit les plannings, envoie des rappels et fait le suivi après chaque prestation.") },
+        { title: t("Cleaning Business", "Entreprise de Nettoyage"), desc: t("Regular clients need scheduled visits. The system tracks schedules, sends reminders, and follows up after each service.", "Les clients réguliers ont besoin de visites planifiées. Le système suit les plannings, envoie des rappels et fait le suivi après chaque prestation.") },
         { title: t("Coaching / Training", "Coaching / Formation"), desc: t("Follow up with prospects who showed interest, send course reminders, and track client progress automatically.", "Relancez les prospects intéressés, envoyez des rappels de cours et suivez la progression des clients automatiquement.") },
       ],
       workflow: [

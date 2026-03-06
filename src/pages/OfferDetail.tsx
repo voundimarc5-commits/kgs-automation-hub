@@ -36,18 +36,18 @@ const OfferDetail = () => {
     "client-messaging": {
       icon: MessageSquare,
       image: salonImg,
-      name: t("Automatic Client Messaging System", "Système de Messagerie Client Automatique"),
+      name: t("Smart Client Messaging System", "Système de Messagerie Client Intelligent"),
       shortDesc: t(
-        "Never miss a client message again. Every message receives an automatic and professional response.",
-        "Ne manquez plus jamais un message client. Chaque message reçoit une réponse automatique et professionnelle."
+        "Never miss a client message again. Every message receives an instant, professional response.",
+        "Ne manquez plus jamais un message client. Chaque message reçoit une réponse instantanée et professionnelle."
       ),
       problem: t(
         "You receive dozens of WhatsApp messages every day — price requests, availability questions, appointment bookings. When you're busy serving clients, messages pile up. By the time you reply, the client has already gone to a competitor.",
         "Vous recevez des dizaines de messages WhatsApp chaque jour — demandes de prix, questions de disponibilité, prises de rendez-vous. Quand vous êtes occupé(e) à servir vos clients, les messages s'accumulent. Le temps de répondre, le client est déjà parti chez un concurrent."
       ),
       solution: t(
-        "Our automation system responds instantly to every incoming message with professional, personalized replies. It collects client information, answers frequently asked questions, and notifies you only when human attention is needed.",
-        "Notre système d'automatisation répond instantanément à chaque message entrant avec des réponses professionnelles et personnalisées. Il collecte les informations client, répond aux questions fréquentes et vous notifie uniquement quand une attention humaine est nécessaire."
+        "Our solution responds instantly to every incoming message with professional, personalized replies. It collects client information, answers frequently asked questions, and notifies you only when human attention is needed.",
+        "Notre solution répond instantanément à chaque message entrant avec des réponses professionnelles et personnalisées. Elle collecte les informations client, répond aux questions fréquentes et vous notifie uniquement quand une attention humaine est nécessaire."
       ),
       gains: [
         t("No more lost WhatsApp messages", "Plus de messages WhatsApp perdus"),

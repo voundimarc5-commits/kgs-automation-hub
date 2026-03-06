@@ -109,7 +109,7 @@ const OfferDetail = () => {
       ),
       gains: [
         t("Clear organization of all requests", "Organisation claire de toutes les demandes"),
-        t("Automatic client follow-ups", "Relances clients automatiques"),
+        t("Smart client follow-ups", "Relances clients intelligentes"),
         t("Less forgotten appointments or tasks", "Moins de rendez-vous ou tâches oubliés"),
         t("Better control of daily operations", "Meilleur contrôle des opérations quotidiennes"),
       ],

@@ -10,7 +10,7 @@ const HeroSection = () => {
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
       {/* Full-width background image with dark green overlay */}
       <div className="absolute inset-0">
-        <img src={heroImg} alt="" className="w-full h-full object-cover" />
+        <img src={heroImg} alt="" className="w-full h-full object-cover object-center" style={{ objectPosition: 'center 40%' }} />
         <div className="absolute inset-0 bg-gradient-to-r from-[hsla(165,60%,10%,0.85)] via-[hsla(165,50%,12%,0.75)] to-[hsla(165,40%,15%,0.65)]" />
       </div>
 

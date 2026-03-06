@@ -41,23 +41,23 @@ const WhySection = () => {
   ];
 
   return (
-    <section id="why" className="section-padding bg-secondary/30">
+    <section id="why" className="section-padding bg-muted/50">
       <div className="container mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <span className="text-primary text-sm font-semibold uppercase tracking-wider">
             {t("Why KGS", "Pourquoi KGS")}
           </span>
-          <h2 className="font-display text-3xl md:text-5xl font-bold mt-3">
+          <h2 className="font-display text-3xl md:text-4xl font-bold mt-3">
             {t("Built Different", "Construit Différemment")}
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-5">
           {reasons.map((r, i) => (
             <motion.div
               key={i}
@@ -65,13 +65,13 @@ const WhySection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="flex gap-5 items-start"
+              className="flex gap-4 items-start bg-card rounded-xl p-6 glow-border shadow-sm"
             >
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <r.icon size={22} className="text-primary" />
+              <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <r.icon size={20} className="text-primary" />
               </div>
               <div>
-                <h3 className="font-display text-lg font-semibold mb-2">{r.title}</h3>
+                <h3 className="font-display text-base font-semibold mb-1">{r.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{r.desc}</p>
               </div>
             </motion.div>

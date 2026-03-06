@@ -1,57 +1,40 @@
 import { useLang } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
-import { Check, MessageSquare, Briefcase, Home } from "lucide-react";
+import { MessageSquare, Briefcase, Home, ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const PricingSection = () => {
   const { t } = useLang();
+  const navigate = useNavigate();
 
   const plans = [
     {
       icon: MessageSquare,
+      slug: "client-messaging",
       name: t("Client Messaging", "Messagerie Client"),
       desc: t(
-        "Automatic responses & client capture on WhatsApp",
-        "Réponses automatiques & capture de clients sur WhatsApp"
+        "Never miss a client message again. Every message receives an automatic and professional response.",
+        "Ne manquez plus jamais un message client. Chaque message reçoit une réponse automatique et professionnelle."
       ),
-      price: t("From $150/mo", "À partir de 150$/mois"),
-      features: [
-        t("Auto-reply to every message", "Réponse auto à chaque message"),
-        t("Client info capture", "Capture d'infos client"),
-        t("Welcome & away messages", "Messages de bienvenue & d'absence"),
-        t("Basic analytics", "Analyses de base"),
-      ],
     },
     {
       icon: Briefcase,
+      slug: "business-organization",
       name: t("Business Organization", "Organisation Business"),
       desc: t(
-        "Full workflow automation & follow-ups",
-        "Automatisation complète des flux & relances"
+        "Your business continues to run even when you are not available.",
+        "Votre business continue de tourner même quand vous n'êtes pas disponible."
       ),
-      price: t("From $300/mo", "À partir de 300$/mois"),
       popular: true,
-      features: [
-        t("Everything in Client Messaging", "Tout du pack Messagerie Client"),
-        t("Order & booking management", "Gestion des commandes & réservations"),
-        t("Automated follow-ups", "Relances automatiques"),
-        t("Team notifications", "Notifications d'équipe"),
-        t("Monthly optimization", "Optimisation mensuelle"),
-      ],
     },
     {
       icon: Home,
+      slug: "property-management",
       name: t("Property Management", "Gestion Locative"),
       desc: t(
-        "Airbnb & rental automation",
-        "Automatisation Airbnb & locations"
+        "Manage your rental properties remotely without stress.",
+        "Gérez vos propriétés locatives à distance sans stress."
       ),
-      price: t("From $250/mo", "À partir de 250$/mois"),
-      features: [
-        t("Guest auto-messaging", "Messagerie auto pour les hôtes"),
-        t("Check-in/out automation", "Automatisation check-in/out"),
-        t("Cleaning team coordination", "Coordination équipe ménage"),
-        t("Multi-property support", "Support multi-propriétés"),
-      ],
     },
   ];
 
@@ -62,10 +45,10 @@ const PricingSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <span className="text-primary text-sm font-semibold uppercase tracking-wider">
-            {t("Pricing", "Tarifs")}
+            {t("Our Offers", "Nos Offres")}
           </span>
           <h2 className="font-display text-3xl md:text-5xl font-bold mt-3">
             {t("Choose Your Automation", "Choisissez Votre Automatisation")}
@@ -88,8 +71,8 @@ const PricingSection = () => {
               transition={{ delay: i * 0.12 }}
               className={`relative bg-card rounded-2xl p-8 flex flex-col ${
                 plan.popular
-                  ? "glow-box border-2 border-primary/50"
-                  : "glow-border"
+                  ? "glow-box border-2 border-primary/30 shadow-lg"
+                  : "glow-border shadow-sm"
               }`}
             >
               {plan.popular && (
@@ -101,26 +84,18 @@ const PricingSection = () => {
                 <plan.icon size={24} className="text-primary" />
               </div>
               <h3 className="font-display text-xl font-bold">{plan.name}</h3>
-              <p className="text-muted-foreground text-sm mt-2 mb-4">{plan.desc}</p>
-              <div className="text-2xl font-bold text-gradient font-display mb-6">{plan.price}</div>
-              <ul className="space-y-3 mb-8 flex-1">
-                {plan.features.map((f, j) => (
-                  <li key={j} className="flex items-start gap-2 text-sm">
-                    <Check size={16} className="text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-secondary-foreground">{f}</span>
-                  </li>
-                ))}
-              </ul>
-              <a
-                href="#cta"
-                className={`text-center py-3 rounded-xl font-semibold text-sm transition-all ${
+              <p className="text-muted-foreground text-sm mt-2 mb-6 flex-1">{plan.desc}</p>
+              <button
+                onClick={() => navigate(`/offer/${plan.slug}`)}
+                className={`flex items-center justify-center gap-2 text-center py-3 rounded-xl font-semibold text-sm transition-all cursor-pointer ${
                   plan.popular
                     ? "bg-primary text-primary-foreground hover:opacity-90"
                     : "border border-primary/40 text-primary hover:bg-primary/10"
                 }`}
               >
-                {t("Request Installation", "Demander l'Installation")}
-              </a>
+                {t("See Details", "Voir les Détails")}
+                <ArrowRight size={16} />
+              </button>
             </motion.div>
           ))}
         </div>

@@ -2,33 +2,46 @@ import { useLang } from "@/contexts/LanguageContext";
 import logo from "@/assets/kgs-logo.png";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const { lang, setLang, t } = useLang();
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
   const links = [
-    { href: "#problem", label: t("Problem", "Problème") },
-    { href: "#solution", label: t("Solution", "Solution") },
-    { href: "#pricing", label: t("Pricing", "Tarifs") },
-    { href: "#why", label: t("Why KGS", "Pourquoi KGS") },
+    { href: "/#problem", label: t("Problem", "Problème") },
+    { href: "/#solution", label: t("Solution", "Solution") },
+    { href: "/#pricing", label: t("Pricing", "Tarifs") },
+    { href: "/#why", label: t("Why KGS", "Pourquoi KGS") },
   ];
 
+  const handleNav = (href: string) => {
+    setOpen(false);
+    if (href.startsWith("/#")) {
+      navigate("/");
+      setTimeout(() => {
+        const el = document.querySelector(href.replace("/", ""));
+        el?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  };
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <a href="#" className="flex items-center gap-2">
+        <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }} className="flex items-center gap-2">
           <img src={logo} alt="KGS Automations" className="h-10" />
         </a>
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
           {links.map((l) => (
-            <a key={l.href} href={l.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            <a key={l.href} href={l.href} onClick={(e) => { e.preventDefault(); handleNav(l.href); }} className="text-sm text-muted-foreground hover:text-primary transition-colors">
               {l.label}
             </a>
           ))}
-          <a href="#cta" className="bg-primary text-primary-foreground px-5 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity">
+          <a href="/#cta" onClick={(e) => { e.preventDefault(); handleNav("/#cta"); }} className="bg-primary text-primary-foreground px-5 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity">
             {t("Get Started", "Commencer")}
           </a>
           <button
@@ -56,11 +69,11 @@ const Navbar = () => {
       {open && (
         <div className="md:hidden bg-background border-b border-border px-4 pb-4 space-y-3">
           {links.map((l) => (
-            <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="block text-sm text-muted-foreground hover:text-primary">
+            <a key={l.href} href={l.href} onClick={(e) => { e.preventDefault(); handleNav(l.href); }} className="block text-sm text-muted-foreground hover:text-primary">
               {l.label}
             </a>
           ))}
-          <a href="#cta" onClick={() => setOpen(false)} className="block bg-primary text-primary-foreground text-center px-5 py-2 rounded-lg text-sm font-semibold">
+          <a href="/#cta" onClick={(e) => { e.preventDefault(); handleNav("/#cta"); }} className="block bg-primary text-primary-foreground text-center px-5 py-2 rounded-lg text-sm font-semibold">
             {t("Get Started", "Commencer")}
           </a>
         </div>

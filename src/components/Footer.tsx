@@ -1,28 +1,78 @@
 import { useLang } from "@/contexts/LanguageContext";
 import logo from "@/assets/kgs-logo.png";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   const { t } = useLang();
 
   return (
-    <footer className="border-t border-border py-12 px-4">
-      <div className="container mx-auto max-w-5xl flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="flex items-center gap-3">
-          <img src={logo} alt="KGS Automations" className="h-8" />
+    <footer className="bg-card border-t border-border pt-12 pb-6 px-4">
+      <div className="container mx-auto max-w-6xl">
+        <div className="grid md:grid-cols-4 gap-8 mb-10">
+          {/* About */}
+          <div className="md:col-span-2">
+            <img src={logo} alt="KGS Automations" className="h-10 mb-4" />
+            <p className="text-muted-foreground text-sm leading-relaxed max-w-md">
+              {t(
+                "KGS Automations is part of Kora Global Systems — a technology group focused on structuring, securing, and operating African businesses remotely. Our mission: helping African businesses operate smoothly through simple automation systems.",
+                "KGS Automations fait partie de Kora Global Systems — un groupe technologique dédié à la structuration, la sécurisation et l'exploitation des entreprises africaines à distance. Notre mission : aider les entreprises africaines à fonctionner efficacement grâce à des systèmes d'automatisation simples."
+              )}
+            </p>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="font-display font-semibold mb-4 text-sm uppercase tracking-wider">
+              {t("Contact", "Contact")}
+            </h4>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              <li className="flex items-center gap-2">
+                <Mail size={14} className="text-primary" />
+                <a href="mailto:contact@kgsautomations.com" className="hover:text-primary transition-colors">
+                  contact@kgsautomations.com
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone size={14} className="text-primary" />
+                <a href="https://wa.me/message/YOUR_WHATSAPP_LINK" className="hover:text-primary transition-colors">
+                  WhatsApp
+                </a>
+              </li>
+              <li className="flex items-start gap-2">
+                <MapPin size={14} className="text-primary mt-0.5" />
+                <span>{t("Operating remotely across Africa", "Opérant à distance à travers l'Afrique")}</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="font-display font-semibold mb-4 text-sm uppercase tracking-wider">
+              {t("Legal", "Légal")}
+            </h4>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              <li>
+                <a href="#" className="hover:text-primary transition-colors">
+                  {t("Privacy Policy", "Politique de Confidentialité")}
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-primary transition-colors">
+                  {t("Terms of Service", "Conditions d'Utilisation")}
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <p className="text-muted-foreground text-sm text-center">
-          {t(
-            "A Kora Global Systems company. © 2026 All rights reserved.",
-            "Une entreprise de Kora Global Systems. © 2026 Tous droits réservés."
-          )}
-        </p>
-        <div className="flex gap-6 text-sm text-muted-foreground">
-          <a href="#" className="hover:text-primary transition-colors">
-            {t("Privacy", "Confidentialité")}
-          </a>
-          <a href="#" className="hover:text-primary transition-colors">
-            {t("Terms", "Conditions")}
-          </a>
+
+        {/* Copyright */}
+        <div className="border-t border-border pt-6 text-center">
+          <p className="text-muted-foreground text-xs">
+            {t(
+              "© 2026 KGS Automations — A Kora Global Systems company. All rights reserved.",
+              "© 2026 KGS Automations — Une entreprise de Kora Global Systems. Tous droits réservés."
+            )}
+          </p>
         </div>
       </div>
     </footer>

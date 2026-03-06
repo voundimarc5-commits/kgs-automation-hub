@@ -31,8 +31,8 @@ const HeroSection = () => {
 
           <p className="text-lg text-white/80 max-w-lg mb-8">
             {t(
-              "Simple automations that capture every client, organize your business, and keep things running — even when you're not available.",
-              "Des automatisations simples qui capturent chaque client, organisent votre business et gardent tout en marche — même quand vous n'êtes pas disponible."
+              "Smart solutions that capture every client, organize your business, and keep things running — even when you're not available.",
+              "Des solutions intelligentes qui capturent chaque client, organisent votre business et gardent tout en marche — même quand vous n'êtes pas disponible."
             )}
           </p>
 
@@ -41,7 +41,7 @@ const HeroSection = () => {
               href="#cta"
               className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 rounded-xl text-sm font-semibold hover:opacity-90 transition-opacity glow-box"
             >
-              {t("Automate My Business", "Automatiser Mon Business")}
+              {t("Boost My Business", "Booster Mon Business")}
               <ArrowRight size={18} />
             </a>
             <a
@@ -56,7 +56,7 @@ const HeroSection = () => {
           <div className="mt-10 grid grid-cols-3 gap-4">
             {[
               { num: "70%", label: t("clients lost to missed messages", "des clients perdus par messages manqués") },
-              { num: "24/7", label: t("automatic responses", "réponses automatiques") },
+              { num: "24/7", label: t("instant responses", "réponses instantanées") },
               { num: "5min", label: t("setup time", "temps de mise en place") },
             ].map((s) => (
               <div key={s.num} className="text-center">

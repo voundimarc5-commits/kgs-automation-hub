@@ -18,8 +18,8 @@ const WhySection = () => {
       icon: Zap,
       title: t("Simple & Effective", "Simple & Efficace"),
       desc: t(
-        "No complicated software to learn. Our automations work in the tools you already use.",
-        "Pas de logiciel compliqué à apprendre. Nos automatisations fonctionnent dans les outils que vous utilisez déjà."
+        "No complicated software to learn. Our solutions work within the tools you already use.",
+        "Pas de logiciel compliqué à apprendre. Nos solutions fonctionnent dans les outils que vous utilisez déjà."
       ),
     },
     {
@@ -34,8 +34,8 @@ const WhySection = () => {
       icon: RefreshCw,
       title: t("Continuous Improvement", "Amélioration Continue"),
       desc: t(
-        "We don't just set it up and leave. Monthly optimizations ensure your automations get better over time.",
-        "On ne se contente pas d'installer et de partir. Des optimisations mensuelles assurent que vos automatisations s'améliorent avec le temps."
+        "We don't just set it up and leave. Monthly optimizations ensure your systems get better over time.",
+        "On ne se contente pas d'installer et de partir. Des optimisations mensuelles assurent que vos systèmes s'améliorent avec le temps."
       ),
     },
   ];

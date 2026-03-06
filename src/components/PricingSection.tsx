@@ -13,8 +13,8 @@ const PricingSection = () => {
       slug: "client-messaging",
       name: t("Client Messaging", "Messagerie Client"),
       desc: t(
-        "Never miss a client message again. Every message receives an automatic and professional response.",
-        "Ne manquez plus jamais un message client. Chaque message reçoit une réponse automatique et professionnelle."
+        "Never miss a client message again. Every message receives an instant, professional response.",
+        "Ne manquez plus jamais un message client. Chaque message reçoit une réponse instantanée et professionnelle."
       ),
     },
     {
@@ -51,7 +51,7 @@ const PricingSection = () => {
             {t("Our Offers", "Nos Offres")}
           </span>
           <h2 className="font-display text-2xl md:text-3xl font-bold mt-2">
-            {t("Choose Your Automation", "Choisissez Votre Automatisation")}
+            {t("Choose Your Solution", "Choisissez Votre Solution")}
           </h2>
           <p className="text-muted-foreground text-sm mt-3 max-w-lg mx-auto">
             {t(

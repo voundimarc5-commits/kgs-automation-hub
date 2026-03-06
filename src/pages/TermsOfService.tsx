@@ -23,8 +23,8 @@ const TermsOfService = () => {
               </h2>
               <p>
                 {t(
-                  "KGS Automations provides operational automation services designed for small and medium businesses in Africa. Our services focus on WhatsApp-based workflows, client management, and property management automation.",
-                  "KGS Automations fournit des services d'automatisation opérationnelle conçus pour les petites et moyennes entreprises en Afrique. Nos services se concentrent sur les workflows basés sur WhatsApp, la gestion client et l'automatisation de la gestion locative."
+                  "KGS Automations provides operational business solutions designed for small and medium businesses in Africa. Our services focus on WhatsApp-based workflows, client management, and property management systems.",
+                  "KGS Automations fournit des solutions opérationnelles conçues pour les petites et moyennes entreprises en Afrique. Nos services se concentrent sur les workflows basés sur WhatsApp, la gestion client et les systèmes de gestion locative."
                 )}
               </p>
             </section>
@@ -59,8 +59,8 @@ const TermsOfService = () => {
               </h2>
               <p>
                 {t(
-                  "Services may evolve as systems improve. We continuously work to enhance the automation tools and may update features, processes, or integrations to better serve our clients.",
-                  "Les services peuvent évoluer à mesure que les systèmes s'améliorent. Nous travaillons continuellement à améliorer les outils d'automatisation et pouvons mettre à jour les fonctionnalités, processus ou intégrations pour mieux servir nos clients."
+                  "Services may evolve as systems improve. We continuously work to enhance our tools and may update features, processes, or integrations to better serve our clients.",
+                  "Les services peuvent évoluer à mesure que les systèmes s'améliorent. Nous travaillons continuellement à améliorer nos outils et pouvons mettre à jour les fonctionnalités, processus ou intégrations pour mieux servir nos clients."
                 )}
               </p>
             </section>

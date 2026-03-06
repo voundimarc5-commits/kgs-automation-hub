@@ -21,8 +21,8 @@ const CTASection = () => {
           </h2>
           <p className="text-muted-foreground text-base mb-7 max-w-xl mx-auto">
             {t(
-              "Get your automation installed in days, not months. Start capturing every opportunity today.",
-              "Obtenez votre automatisation installée en jours, pas en mois. Commencez à capturer chaque opportunité dès aujourd'hui."
+              "Get your solution installed in days, not months. Start capturing every opportunity today.",
+              "Obtenez votre solution installée en jours, pas en mois. Commencez à capturer chaque opportunité dès aujourd'hui."
             )}
           </p>
 

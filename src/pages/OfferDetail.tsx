@@ -36,18 +36,18 @@ const OfferDetail = () => {
     "client-messaging": {
       icon: MessageSquare,
       image: salonImg,
-      name: t("Automatic Client Messaging System", "Système de Messagerie Client Automatique"),
+      name: t("Smart Client Messaging System", "Système de Messagerie Client Intelligent"),
       shortDesc: t(
-        "Never miss a client message again. Every message receives an automatic and professional response.",
-        "Ne manquez plus jamais un message client. Chaque message reçoit une réponse automatique et professionnelle."
+        "Never miss a client message again. Every message receives an instant, professional response.",
+        "Ne manquez plus jamais un message client. Chaque message reçoit une réponse instantanée et professionnelle."
       ),
       problem: t(
         "You receive dozens of WhatsApp messages every day — price requests, availability questions, appointment bookings. When you're busy serving clients, messages pile up. By the time you reply, the client has already gone to a competitor.",
         "Vous recevez des dizaines de messages WhatsApp chaque jour — demandes de prix, questions de disponibilité, prises de rendez-vous. Quand vous êtes occupé(e) à servir vos clients, les messages s'accumulent. Le temps de répondre, le client est déjà parti chez un concurrent."
       ),
       solution: t(
-        "Our automation system responds instantly to every incoming message with professional, personalized replies. It collects client information, answers frequently asked questions, and notifies you only when human attention is needed.",
-        "Notre système d'automatisation répond instantanément à chaque message entrant avec des réponses professionnelles et personnalisées. Il collecte les informations client, répond aux questions fréquentes et vous notifie uniquement quand une attention humaine est nécessaire."
+        "Our solution responds instantly to every incoming message with professional, personalized replies. It collects client information, answers frequently asked questions, and notifies you only when human attention is needed.",
+        "Notre solution répond instantanément à chaque message entrant avec des réponses professionnelles et personnalisées. Elle collecte les informations client, répond aux questions fréquentes et vous notifie uniquement quand une attention humaine est nécessaire."
       ),
       gains: [
         t("No more lost WhatsApp messages", "Plus de messages WhatsApp perdus"),
@@ -56,21 +56,21 @@ const OfferDetail = () => {
         t("Less stress managing conversations", "Moins de stress dans la gestion des conversations"),
       ],
       includes: [
-        t("Automatic WhatsApp replies (24/7)", "Réponses WhatsApp automatiques (24h/24)"),
+        t("Instant WhatsApp replies (24/7)", "Réponses WhatsApp instantanées (24h/24)"),
         t("Custom FAQ responses tailored to your business", "Réponses FAQ personnalisées pour votre activité"),
-        t("Automatic client information collection", "Collecte automatique d'informations client"),
+        t("Smart client information collection", "Collecte intelligente d'informations client"),
         t("Smart notification system for the business owner", "Système de notification intelligent pour le propriétaire"),
         t("Welcome and follow-up message sequences", "Séquences de messages de bienvenue et de suivi"),
         t("Monthly performance report", "Rapport de performance mensuel"),
       ],
       useCases: [
         { title: t("Hair Salon", "Salon de Coiffure"), desc: t("Clients ask about prices, availability, and services. The bot answers instantly and books appointments.", "Les clientes demandent les prix, la disponibilité et les services. Le bot répond instantanément et prend les rendez-vous.") },
-        { title: t("Restaurant", "Restaurant"), desc: t("Customers ask about the menu, opening hours, and reservations. Automation handles it all.", "Les clients demandent le menu, les horaires et les réservations. L'automatisation gère tout.") },
+        { title: t("Restaurant", "Restaurant"), desc: t("Customers ask about the menu, opening hours, and reservations. The system handles it all seamlessly.", "Les clients demandent le menu, les horaires et les réservations. Le système gère tout de manière fluide.") },
         { title: t("Freelance Service", "Service Freelance"), desc: t("Service providers receive quote requests and the system collects project details automatically.", "Les prestataires reçoivent des demandes de devis et le système collecte les détails du projet automatiquement.") },
       ],
       workflow: [
         t("Client sends a WhatsApp message", "Le client envoie un message WhatsApp"),
-        t("Automation detects the intent (price, booking, info)", "L'automatisation détecte l'intention (prix, réservation, info)"),
+        t("The system detects the intent (price, booking, info)", "Le système détecte l'intention (prix, réservation, info)"),
         t("Personalized response is sent instantly", "Une réponse personnalisée est envoyée instantanément"),
         t("Client information is saved automatically", "Les informations client sont enregistrées automatiquement"),
         t("You receive a notification with a summary", "Vous recevez une notification avec un résumé"),
@@ -82,9 +82,9 @@ const OfferDetail = () => {
         { icon: Shield, label: t("Never miss a message", "Ne ratez plus jamais un message") },
       ],
       scenario: {
-        title: t("A day with automation", "Une journée avec l'automatisation"),
+        title: t("A day with KGS", "Une journée avec KGS"),
         before: t("Before: You're braiding a client's hair. 15 WhatsApp messages come in. You can't reply. By evening, 5 potential clients have gone elsewhere.", "Avant : Vous êtes en train de coiffer une cliente. 15 messages WhatsApp arrivent. Vous ne pouvez pas répondre. Le soir, 5 clients potentiels sont allés ailleurs."),
-        after: t("After: While you work, the automation replies to all 15 messages, books 3 appointments, and sends you a clean summary. Zero stress.", "Après : Pendant que vous travaillez, l'automatisation répond aux 15 messages, prend 3 rendez-vous et vous envoie un résumé clair. Zéro stress."),
+        after: t("After: While you work, the system replies to all 15 messages, books 3 appointments, and sends you a clean summary. Zero stress.", "Après : Pendant que vous travaillez, le système répond aux 15 messages, prend 3 rendez-vous et vous envoie un résumé clair. Zéro stress."),
       },
       installation: "120€ – 250€",
       installationCfa: "≈ 78 000 – 164 000 FCFA",
@@ -94,7 +94,7 @@ const OfferDetail = () => {
     "business-organization": {
       icon: Briefcase,
       image: businessImg,
-      name: t("Automated Business Organization & Follow-up", "Organisation Business Automatisée & Relances"),
+      name: t("Smart Business Organization & Follow-up", "Organisation Business Intelligente & Relances"),
       shortDesc: t(
         "Your business continues to run even when you are not available.",
         "Votre business continue de tourner même quand vous n'êtes pas disponible."
@@ -104,19 +104,19 @@ const OfferDetail = () => {
         "Gérer un petit business signifie jongler avec tout — demandes clients, relances, rendez-vous, factures. Des choses passent entre les mailles. Les clients ne reviennent pas parce que personne n'a fait de suivi. Vous perdez du chiffre d'affaires sans même vous en rendre compte."
       ),
       solution: t(
-        "We build a complete automated organization system that tracks every client interaction, sends follow-ups automatically, reminds you of important tasks, and gives you a clear view of your business operations — all without you lifting a finger.",
-        "Nous construisons un système d'organisation automatisé complet qui suit chaque interaction client, envoie des relances automatiquement, vous rappelle les tâches importantes et vous donne une vue claire de vos opérations — sans que vous leviez le petit doigt."
+        "We build a complete organization system that tracks every client interaction, sends follow-ups on time, reminds you of important tasks, and gives you a clear view of your business operations — all without you lifting a finger.",
+        "Nous construisons un système d'organisation complet qui suit chaque interaction client, envoie des relances à temps, vous rappelle les tâches importantes et vous donne une vue claire de vos opérations — sans que vous leviez le petit doigt."
       ),
       gains: [
         t("Clear organization of all requests", "Organisation claire de toutes les demandes"),
-        t("Automatic client follow-ups", "Relances clients automatiques"),
+        t("Smart client follow-ups", "Relances clients intelligentes"),
         t("Less forgotten appointments or tasks", "Moins de rendez-vous ou tâches oubliés"),
         t("Better control of daily operations", "Meilleur contrôle des opérations quotidiennes"),
       ],
       includes: [
         t("Structured client request management", "Gestion structurée des demandes clients"),
-        t("Automatic follow-up sequences", "Séquences de relance automatiques"),
-        t("Automated reminders (appointments, payments, tasks)", "Rappels automatiques (rendez-vous, paiements, tâches)"),
+        t("Smart follow-up sequences", "Séquences de relance intelligentes"),
+        t("Scheduled reminders (appointments, payments, tasks)", "Rappels programmés (rendez-vous, paiements, tâches)"),
         t("Simple CRM system adapted to your business", "Système CRM simple adapté à votre activité"),
         t("Monthly activity and performance reporting", "Rapport d'activité et de performance mensuel"),
         t("Client satisfaction tracking", "Suivi de la satisfaction client"),
@@ -124,13 +124,13 @@ const OfferDetail = () => {
       ],
       useCases: [
         { title: t("Catering Service", "Service Traiteur"), desc: t("Orders come from WhatsApp, Instagram, and calls. The system centralizes everything and sends reminders before each event.", "Les commandes arrivent de WhatsApp, Instagram et par téléphone. Le système centralise tout et envoie des rappels avant chaque événement.") },
-        { title: t("Cleaning Business", "Entreprise de Nettoyage"), desc: t("Regular clients need scheduled visits. Automation tracks schedules, sends reminders, and follows up after each service.", "Les clients réguliers ont besoin de visites planifiées. L'automatisation suit les plannings, envoie des rappels et fait le suivi après chaque prestation.") },
+        { title: t("Cleaning Business", "Entreprise de Nettoyage"), desc: t("Regular clients need scheduled visits. The system tracks schedules, sends reminders, and follows up after each service.", "Les clients réguliers ont besoin de visites planifiées. Le système suit les plannings, envoie des rappels et fait le suivi après chaque prestation.") },
         { title: t("Coaching / Training", "Coaching / Formation"), desc: t("Follow up with prospects who showed interest, send course reminders, and track client progress automatically.", "Relancez les prospects intéressés, envoyez des rappels de cours et suivez la progression des clients automatiquement.") },
       ],
       workflow: [
         t("A new request or task is created (manually or automatically)", "Une nouvelle demande ou tâche est créée (manuellement ou automatiquement)"),
         t("The system categorizes and prioritizes it", "Le système la catégorise et la priorise"),
-        t("Automatic follow-ups are scheduled", "Des relances automatiques sont programmées"),
+        t("Smart follow-ups are scheduled", "Des relances intelligentes sont programmées"),
         t("Reminders are sent before deadlines", "Des rappels sont envoyés avant les échéances"),
         t("You review a weekly summary of all activity", "Vous consultez un résumé hebdomadaire de toute l'activité"),
       ],
@@ -141,7 +141,7 @@ const OfferDetail = () => {
         { icon: Shield, label: t("Nothing falls through the cracks", "Plus rien ne passe entre les mailles") },
       ],
       scenario: {
-        title: t("A week with automation", "Une semaine avec l'automatisation"),
+        title: t("A week with KGS", "Une semaine avec KGS"),
         before: t("Before: You forgot to follow up with 3 clients this week. One appointment was missed. You spent Sunday evening catching up on admin work.", "Avant : Vous avez oublié de relancer 3 clients cette semaine. Un rendez-vous a été manqué. Vous avez passé le dimanche soir à rattraper le travail administratif."),
         after: t("After: Every client received a follow-up. All appointments were confirmed. You got a clean weekly report on Monday morning. Weekend free.", "Après : Chaque client a reçu une relance. Tous les rendez-vous ont été confirmés. Vous avez reçu un rapport hebdomadaire clair lundi matin. Week-end libre."),
       },
@@ -153,18 +153,18 @@ const OfferDetail = () => {
     "property-management": {
       icon: Home,
       image: airbnbImg,
-      name: t("Automated Property Management", "Gestion Locative Automatisée"),
+      name: t("Smart Property Management", "Gestion Locative Intelligente"),
       shortDesc: t(
         "Manage your rental properties remotely without stress.",
         "Gérez vos propriétés locatives à distance sans stress."
       ),
       problem: t(
-        "You manage one or more rental properties — Airbnb, short-term lets, or traditional rentals. Guests send repetitive questions about check-in, WiFi, house rules. You're constantly on your phone, sometimes at 2 AM, handling messages that could be automated.",
-        "Vous gérez une ou plusieurs propriétés locatives — Airbnb, locations courte durée ou locations traditionnelles. Les hôtes envoient des questions répétitives sur le check-in, le WiFi, le règlement. Vous êtes constamment sur votre téléphone, parfois à 2h du matin, à gérer des messages qui pourraient être automatisés."
+        "You manage one or more rental properties — Airbnb, short-term lets, or traditional rentals. Guests send repetitive questions about check-in, WiFi, house rules. You're constantly on your phone, sometimes at 2 AM, handling messages that could be handled by a system.",
+        "Vous gérez une ou plusieurs propriétés locatives — Airbnb, locations courte durée ou locations traditionnelles. Les hôtes envoient des questions répétitives sur le check-in, le WiFi, le règlement. Vous êtes constamment sur votre téléphone, parfois à 2h du matin, à gérer des messages qu'un système pourrait traiter."
       ),
       solution: t(
-        "We set up a complete guest communication and property management automation. From booking confirmation to post-checkout review requests — everything runs on autopilot while you focus on growing your portfolio.",
-        "Nous mettons en place une automatisation complète de la communication avec les hôtes et de la gestion locative. De la confirmation de réservation à la demande d'avis après le départ — tout fonctionne en pilote automatique pendant que vous vous concentrez sur le développement de votre portefeuille."
+        "We set up a complete guest communication and property management solution. From booking confirmation to post-checkout review requests — everything runs on autopilot while you focus on growing your portfolio.",
+        "Nous mettons en place une solution complète de communication avec les hôtes et de gestion locative. De la confirmation de réservation à la demande d'avis après le départ — tout fonctionne en pilote automatique pendant que vous vous concentrez sur le développement de votre portefeuille."
       ),
       gains: [
         t("Less repetitive guest messages to handle", "Moins de messages répétitifs à gérer"),
@@ -173,17 +173,17 @@ const OfferDetail = () => {
         t("Higher ratings and more bookings", "Meilleures notes et plus de réservations"),
       ],
       includes: [
-        t("Automated guest messaging (pre/during/post stay)", "Messagerie automatisée (avant/pendant/après séjour)"),
+        t("Smart guest messaging (pre/during/post stay)", "Messagerie intelligente (avant/pendant/après séjour)"),
         t("Digital check-in / check-out instructions", "Instructions numériques de check-in / check-out"),
         t("Property information & house rules system", "Système d'information et règlement de la propriété"),
         t("Incident and maintenance reporting", "Signalement d'incidents et de maintenance"),
         t("Owner dashboard and reporting", "Tableau de bord et rapports propriétaire"),
-        t("Guest review request automation", "Automatisation des demandes d'avis"),
+        t("Guest review request system", "Système de demande d'avis"),
         t("Multi-property support", "Support multi-propriétés"),
       ],
       useCases: [
-        { title: t("Airbnb Host", "Hôte Airbnb"), desc: t("Guests get automatic check-in instructions, WiFi details, and local recommendations. Reviews are requested automatically after checkout.", "Les hôtes reçoivent automatiquement les instructions de check-in, les détails WiFi et les recommandations locales. Les avis sont demandés automatiquement après le départ.") },
-        { title: t("Short-term Rental Manager", "Gestionnaire de Location Courte Durée"), desc: t("Manage multiple properties with automated guest flows, cleaning schedules, and owner reports.", "Gérez plusieurs propriétés avec des flux automatisés, des plannings de ménage et des rapports propriétaires.") },
+        { title: t("Airbnb Host", "Hôte Airbnb"), desc: t("Guests get instant check-in instructions, WiFi details, and local recommendations. Reviews are requested after checkout.", "Les hôtes reçoivent les instructions de check-in, les détails WiFi et les recommandations locales. Les avis sont demandés après le départ.") },
+        { title: t("Short-term Rental Manager", "Gestionnaire de Location Courte Durée"), desc: t("Manage multiple properties with smart guest flows, cleaning schedules, and owner reports.", "Gérez plusieurs propriétés avec des flux intelligents, des plannings de ménage et des rapports propriétaires.") },
         { title: t("Diaspora Property Owner", "Propriétaire de la Diaspora"), desc: t("Own property in Africa but live abroad? The system handles day-to-day guest communication and sends you incident alerts.", "Vous possédez un bien en Afrique mais vivez à l'étranger ? Le système gère la communication quotidienne avec les hôtes et vous envoie des alertes en cas d'incident.") },
       ],
       workflow: [
@@ -200,7 +200,7 @@ const OfferDetail = () => {
         { icon: Shield, label: t("Manage from anywhere in the world", "Gérez depuis n'importe où dans le monde") },
       ],
       scenario: {
-        title: t("A guest's journey with automation", "Le parcours d'un hôte avec l'automatisation"),
+        title: t("A guest's journey with KGS", "Le parcours d'un hôte avec KGS"),
         before: t("Before: A guest arrives at 11 PM and can't find the key. They call you 3 times. You send manual instructions half-asleep. Bad review.", "Avant : Un hôte arrive à 23h et ne trouve pas la clé. Il vous appelle 3 fois. Vous envoyez des instructions manuellement à moitié endormi(e). Mauvais avis."),
         after: t("After: The guest received digital check-in instructions 24h before arrival with photos and a map. They found everything easily. 5-star review.", "Après : L'hôte a reçu les instructions de check-in numériques 24h avant l'arrivée avec photos et plan. Il a tout trouvé facilement. Avis 5 étoiles."),
       },

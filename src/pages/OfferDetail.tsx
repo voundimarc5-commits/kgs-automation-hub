@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import NetworkBackground from "@/components/NetworkBackground";
 
 import salonImg from "@/assets/african-salon.jpg";
-import restaurantImg from "@/assets/african-restaurant.jpg";
+import businessImg from "@/assets/african-restaurant.jpg";
 import airbnbImg from "@/assets/african-airbnb.jpg";
 
 const OfferDetail = () => {
@@ -50,7 +50,7 @@ const OfferDetail = () => {
     },
     "business-organization": {
       icon: Briefcase,
-      image: restaurantImg,
+      image: businessImg,
       name: t("Automated Business Organization & Follow-up", "Organisation Business Automatisée & Relances"),
       shortDesc: t(
         "Your business continues to run even when you are not available.",
@@ -176,18 +176,18 @@ const OfferDetail = () => {
             </div>
 
             {/* Pricing */}
-            <div className="bg-primary/5 rounded-2xl p-8 border border-primary/20 mb-8">
-              <h2 className="font-display text-xl font-bold mb-5">
+            <div className="bg-primary/5 rounded-xl p-6 border border-primary/15 mb-8">
+              <h2 className="font-display text-lg font-bold mb-4">
                 {t("Pricing", "Tarifs")}
               </h2>
-              <div className="grid sm:grid-cols-2 gap-6">
+              <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <p className="text-sm text-muted-foreground mb-1">{t("Installation", "Installation")}</p>
-                  <p className="text-2xl font-bold text-gradient font-display">{offer.installation}</p>
+                  <p className="text-xs text-muted-foreground mb-1">{t("Installation", "Installation")}</p>
+                  <p className="text-xl font-bold text-gradient font-display">{offer.installation}</p>
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground mb-1">{t("Maintenance", "Maintenance")}</p>
-                  <p className="text-2xl font-bold text-gradient font-display">{offer.maintenance}</p>
+                  <p className="text-xs text-muted-foreground mb-1">{t("Maintenance", "Maintenance")}</p>
+                  <p className="text-xl font-bold text-gradient font-display">{offer.maintenance}</p>
                 </div>
               </div>
             </div>

@@ -178,7 +178,7 @@ const OfferDetail = () => {
         t("Property information & house rules system", "Système d'information et règlement de la propriété"),
         t("Incident and maintenance reporting", "Signalement d'incidents et de maintenance"),
         t("Owner dashboard and reporting", "Tableau de bord et rapports propriétaire"),
-        t("Guest review request automation", "Automatisation des demandes d'avis"),
+        t("Guest review request system", "Système de demande d'avis"),
         t("Multi-property support", "Support multi-propriétés"),
       ],
       useCases: [

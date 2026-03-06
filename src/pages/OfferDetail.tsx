@@ -56,9 +56,9 @@ const OfferDetail = () => {
         t("Less stress managing conversations", "Moins de stress dans la gestion des conversations"),
       ],
       includes: [
-        t("Automatic WhatsApp replies (24/7)", "Réponses WhatsApp automatiques (24h/24)"),
+        t("Instant WhatsApp replies (24/7)", "Réponses WhatsApp instantanées (24h/24)"),
         t("Custom FAQ responses tailored to your business", "Réponses FAQ personnalisées pour votre activité"),
-        t("Automatic client information collection", "Collecte automatique d'informations client"),
+        t("Smart client information collection", "Collecte intelligente d'informations client"),
         t("Smart notification system for the business owner", "Système de notification intelligent pour le propriétaire"),
         t("Welcome and follow-up message sequences", "Séquences de messages de bienvenue et de suivi"),
         t("Monthly performance report", "Rapport de performance mensuel"),

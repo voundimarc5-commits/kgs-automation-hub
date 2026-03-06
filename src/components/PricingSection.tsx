@@ -47,7 +47,7 @@ const PricingSection = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="text-primary text-sm font-semibold uppercase tracking-wider">
+          <span className="text-primary text-xs font-semibold uppercase tracking-wider">
             {t("Our Offers", "Nos Offres")}
           </span>
           <h2 className="font-display text-2xl md:text-3xl font-bold mt-2">

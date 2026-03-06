@@ -1,7 +1,7 @@
 import { useLang } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
 import { MessageSquare, ArrowRight } from "lucide-react";
-import heroImg from "@/assets/african-salon.jpg";
+import heroImg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   const { t } = useLang();

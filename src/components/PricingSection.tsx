@@ -45,7 +45,7 @@ const PricingSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-8"
         >
           <span className="text-primary text-xs font-semibold uppercase tracking-wider">
             {t("Our Offers", "Nos Offres")}

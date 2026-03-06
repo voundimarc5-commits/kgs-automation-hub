@@ -70,7 +70,7 @@ const OfferDetail = () => {
       ],
       workflow: [
         t("Client sends a WhatsApp message", "Le client envoie un message WhatsApp"),
-        t("Automation detects the intent (price, booking, info)", "L'automatisation détecte l'intention (prix, réservation, info)"),
+        t("The system detects the intent (price, booking, info)", "Le système détecte l'intention (prix, réservation, info)"),
         t("Personalized response is sent instantly", "Une réponse personnalisée est envoyée instantanément"),
         t("Client information is saved automatically", "Les informations client sont enregistrées automatiquement"),
         t("You receive a notification with a summary", "Vous recevez une notification avec un résumé"),

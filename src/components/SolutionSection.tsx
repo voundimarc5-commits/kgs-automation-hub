@@ -8,7 +8,7 @@ const SolutionSection = () => {
   const steps = [
     {
       icon: Send,
-      title: t("Auto-Reply Instantly", "Réponse Automatique Instantanée"),
+      title: t("Instant Professional Replies", "Réponses Professionnelles Instantanées"),
       desc: t(
         "Every WhatsApp message gets an immediate, professional response — no client left waiting.",
         "Chaque message WhatsApp reçoit une réponse immédiate et professionnelle — aucun client n'attend."
@@ -16,7 +16,7 @@ const SolutionSection = () => {
     },
     {
       icon: CalendarCheck,
-      title: t("Organize Automatically", "Organisation Automatique"),
+      title: t("Smart Organization", "Organisation Intelligente"),
       desc: t(
         "Bookings, orders, and requests are captured and sorted without you lifting a finger.",
         "Réservations, commandes et demandes sont capturées et triées sans effort de votre part."
@@ -26,8 +26,8 @@ const SolutionSection = () => {
       icon: Bot,
       title: t("Follow Up & Convert", "Relance & Conversion"),
       desc: t(
-        "Automated follow-ups ensure no lead goes cold. Convert more inquiries into paying clients.",
-        "Les relances automatiques garantissent qu'aucun prospect ne refroidit. Convertissez plus de demandes en clients payants."
+        "Smart follow-ups ensure no lead goes cold. Convert more inquiries into paying clients.",
+        "Des relances intelligentes garantissent qu'aucun prospect ne refroidit. Convertissez plus de demandes en clients payants."
       ),
     },
     {
@@ -53,7 +53,7 @@ const SolutionSection = () => {
             {t("The Solution", "La Solution")}
           </span>
           <h2 className="font-display text-3xl md:text-4xl font-bold mt-3">
-            {t("Automations That Work for You", "Des Automatisations Qui Travaillent Pour Vous")}
+            {t("Solutions That Work for You", "Des Solutions Qui Travaillent Pour Vous")}
           </h2>
           <p className="text-muted-foreground mt-3 max-w-2xl mx-auto text-sm">
             {t(

@@ -34,8 +34,8 @@ const WhySection = () => {
       icon: RefreshCw,
       title: t("Continuous Improvement", "Amélioration Continue"),
       desc: t(
-        "We don't just set it up and leave. Monthly optimizations ensure your automations get better over time.",
-        "On ne se contente pas d'installer et de partir. Des optimisations mensuelles assurent que vos automatisations s'améliorent avec le temps."
+        "We don't just set it up and leave. Monthly optimizations ensure your systems get better over time.",
+        "On ne se contente pas d'installer et de partir. Des optimisations mensuelles assurent que vos systèmes s'améliorent avec le temps."
       ),
     },
   ];

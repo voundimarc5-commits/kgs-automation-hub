@@ -15,8 +15,8 @@ const Footer = () => {
             <img src={logo} alt="KGS Automations" className="h-16 mb-4 animate-logo-pulse" />
             <p className="text-muted-foreground text-sm leading-relaxed max-w-md">
               {t(
-                "KGS Automations is part of Kora Global Systems — a technology group focused on structuring, securing, and operating African businesses remotely. Our mission: helping African businesses operate smoothly through simple automation systems.",
-                "KGS Automations fait partie de Kora Global Systems — un groupe technologique dédié à la structuration, la sécurisation et l'exploitation des entreprises africaines à distance. Notre mission : aider les entreprises africaines à fonctionner efficacement grâce à des systèmes d'automatisation simples."
+                "KGS Automations is part of Kora Global Systems — a technology group focused on structuring, securing, and operating African businesses remotely. Our mission: helping African businesses operate smoothly through smart digital solutions.",
+                "KGS Automations fait partie de Kora Global Systems — un groupe technologique dédié à la structuration, la sécurisation et l'exploitation des entreprises africaines à distance. Notre mission : aider les entreprises africaines à fonctionner efficacement grâce à des solutions digitales intelligentes."
               )}
             </p>
           </div>

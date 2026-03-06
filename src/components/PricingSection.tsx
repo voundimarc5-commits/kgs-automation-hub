@@ -13,8 +13,8 @@ const PricingSection = () => {
       slug: "client-messaging",
       name: t("Client Messaging", "Messagerie Client"),
       desc: t(
-        "Never miss a client message again. Every message receives an automatic and professional response.",
-        "Ne manquez plus jamais un message client. Chaque message reçoit une réponse automatique et professionnelle."
+        "Never miss a client message again. Every message receives an instant, professional response.",
+        "Ne manquez plus jamais un message client. Chaque message reçoit une réponse instantanée et professionnelle."
       ),
     },
     {

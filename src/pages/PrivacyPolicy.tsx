@@ -40,7 +40,7 @@ const PrivacyPolicy = () => {
               </h2>
               <p>{t("We use the collected information to:", "Nous utilisons les informations collectées pour :")}</p>
               <ul className="list-disc pl-5 space-y-1 mt-2">
-                <li>{t("Provide and deliver automation services", "Fournir et livrer les services d'automatisation")}</li>
+                <li>{t("Provide and deliver our services", "Fournir et livrer nos services")}</li>
                 <li>{t("Improve and optimize our systems", "Améliorer et optimiser nos systèmes")}</li>
                 <li>{t("Communicate with clients about their services", "Communiquer avec les clients concernant leurs services")}</li>
               </ul>
@@ -52,8 +52,8 @@ const PrivacyPolicy = () => {
               </h2>
               <p>
                 {t(
-                  "Your data is not sold to third parties. We may share information only with service providers who help us deliver our automation services, and only to the extent necessary.",
-                  "Vos données ne sont pas vendues à des tiers. Nous pouvons partager des informations uniquement avec les prestataires qui nous aident à fournir nos services d'automatisation, et uniquement dans la mesure nécessaire."
+                  "Your data is not sold to third parties. We may share information only with service providers who help us deliver our solutions, and only to the extent necessary.",
+                  "Vos données ne sont pas vendues à des tiers. Nous pouvons partager des informations uniquement avec les prestataires qui nous aident à fournir nos solutions, et uniquement dans la mesure nécessaire."
                 )}
               </p>
             </section>

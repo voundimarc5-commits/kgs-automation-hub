@@ -19,12 +19,12 @@ const Disclaimer = () => {
           <div className="prose prose-sm max-w-none space-y-6 text-muted-foreground">
             <section>
               <h2 className="font-display text-xl font-semibold text-foreground mb-3">
-                {t("Automation Services", "Services d'Automatisation")}
+                {t("Our Services", "Nos Services")}
               </h2>
               <p>
                 {t(
-                  "KGS Automations installs automation systems designed to improve business operations. These systems are built to help capture clients, organize workflows, and streamline communications.",
-                  "KGS Automations installe des systèmes d'automatisation conçus pour améliorer les opérations commerciales. Ces systèmes sont conçus pour aider à capturer des clients, organiser les workflows et fluidifier les communications."
+                  "KGS Automations installs business solutions designed to improve your operations. These systems are built to help capture clients, organize workflows, and streamline communications.",
+                  "KGS Automations installe des solutions business conçues pour améliorer vos opérations. Ces systèmes sont conçus pour aider à capturer des clients, organiser les workflows et fluidifier les communications."
                 )}
               </p>
             </section>
@@ -35,20 +35,20 @@ const Disclaimer = () => {
               </h2>
               <p>
                 {t(
-                  "Results may vary depending on business structure, industry, client engagement, and usage of the automation tools. We do not guarantee specific business outcomes or revenue increases.",
-                  "Les résultats peuvent varier en fonction de la structure de l'entreprise, du secteur d'activité, de l'engagement du client et de l'utilisation des outils d'automatisation. Nous ne garantissons pas de résultats commerciaux spécifiques ni d'augmentation de revenus."
+                  "Results may vary depending on business structure, industry, client engagement, and usage of the tools provided. We do not guarantee specific business outcomes or revenue increases.",
+                  "Les résultats peuvent varier en fonction de la structure de l'entreprise, du secteur d'activité, de l'engagement du client et de l'utilisation des outils fournis. Nous ne garantissons pas de résultats commerciaux spécifiques ni d'augmentation de revenus."
                 )}
               </p>
             </section>
 
             <section>
               <h2 className="font-display text-xl font-semibold text-foreground mb-3">
-                {t("Scope of Automation", "Portée de l'Automatisation")}
+                {t("Scope of Our Solutions", "Portée de Nos Solutions")}
               </h2>
               <p>
                 {t(
-                  "Automation tools assist but do not replace business management. They are designed to support and enhance existing operations, not to serve as a substitute for business decisions, strategy, or human oversight.",
-                  "Les outils d'automatisation assistent mais ne remplacent pas la gestion d'entreprise. Ils sont conçus pour soutenir et améliorer les opérations existantes, et non pour se substituer aux décisions commerciales, à la stratégie ou à la supervision humaine."
+                  "Our tools assist but do not replace business management. They are designed to support and enhance existing operations, not to serve as a substitute for business decisions, strategy, or human oversight.",
+                  "Nos outils assistent mais ne remplacent pas la gestion d'entreprise. Ils sont conçus pour soutenir et améliorer les opérations existantes, et non pour se substituer aux décisions commerciales, à la stratégie ou à la supervision humaine."
                 )}
               </p>
             </section>

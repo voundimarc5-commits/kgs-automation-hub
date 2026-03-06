@@ -56,7 +56,7 @@ const HeroSection = () => {
           <div className="mt-10 grid grid-cols-3 gap-4">
             {[
               { num: "70%", label: t("clients lost to missed messages", "des clients perdus par messages manqués") },
-              { num: "24/7", label: t("automatic responses", "réponses automatiques") },
+              { num: "24/7", label: t("instant responses", "réponses instantanées") },
               { num: "5min", label: t("setup time", "temps de mise en place") },
             ].map((s) => (
               <div key={s.num} className="text-center">

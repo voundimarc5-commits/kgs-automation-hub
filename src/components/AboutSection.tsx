@@ -20,8 +20,8 @@ const AboutSection = () => {
           </h2>
           <p className="text-muted-foreground text-base leading-relaxed max-w-2xl mx-auto">
             {t(
-              "KGS Automations is part of Kora Global Systems — a technology group focused on structuring, securing, and operating African businesses remotely. We bring enterprise-grade automation to small businesses, because every entrepreneur deserves tools that work.",
-              "KGS Automations fait partie de Kora Global Systems — un groupe technologique dédié à la structuration, la sécurisation et l'exploitation des entreprises africaines à distance. Nous apportons l'automatisation de niveau entreprise aux petites entreprises, parce que chaque entrepreneur mérite des outils qui fonctionnent."
+              "KGS Automations is part of Kora Global Systems — a technology group focused on structuring, securing, and operating African businesses remotely. We bring enterprise-grade digital solutions to small businesses, because every entrepreneur deserves tools that work.",
+              "KGS Automations fait partie de Kora Global Systems — un groupe technologique dédié à la structuration, la sécurisation et l'exploitation des entreprises africaines à distance. Nous apportons des solutions digitales de niveau entreprise aux petites entreprises, parce que chaque entrepreneur mérite des outils qui fonctionnent."
             )}
           </p>
         </motion.div>

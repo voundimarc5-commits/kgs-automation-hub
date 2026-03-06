@@ -12,14 +12,14 @@ const CTASection = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative bg-card rounded-3xl p-10 md:p-16 text-center glow-box border border-primary/20 overflow-hidden"
+          className="relative bg-card rounded-2xl p-10 md:p-14 text-center glow-box border border-primary/15 overflow-hidden shadow-lg"
         >
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-accent" />
 
-          <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-3">
             {t("Ready to Stop Losing Clients?", "Prêt à Arrêter de Perdre des Clients ?")}
           </h2>
-          <p className="text-muted-foreground text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-muted-foreground text-base mb-7 max-w-xl mx-auto">
             {t(
               "Get your automation installed in days, not months. Start capturing every opportunity today.",
               "Obtenez votre automatisation installée en jours, pas en mois. Commencez à capturer chaque opportunité dès aujourd'hui."
@@ -36,7 +36,7 @@ const CTASection = () => {
             <ArrowRight size={20} />
           </a>
 
-          <p className="text-xs text-muted-foreground mt-4">
+          <p className="text-xs text-muted-foreground mt-3">
             {t("Free consultation • No commitment", "Consultation gratuite • Sans engagement")}
           </p>
         </motion.div>

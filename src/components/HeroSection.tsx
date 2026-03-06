@@ -41,7 +41,7 @@ const HeroSection = () => {
               href="#cta"
               className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 rounded-xl text-sm font-semibold hover:opacity-90 transition-opacity glow-box"
             >
-              {t("Automate My Business", "Automatiser Mon Business")}
+              {t("Boost My Business", "Booster Mon Business")}
               <ArrowRight size={18} />
             </a>
             <a

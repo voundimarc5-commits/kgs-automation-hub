@@ -61,40 +61,40 @@ const PricingSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
           {plans.map((plan, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.12 }}
-              className={`relative bg-card rounded-2xl p-8 flex flex-col ${
+              transition={{ delay: i * 0.1 }}
+              className={`relative bg-card rounded-xl p-5 flex flex-col ${
                 plan.popular
-                  ? "glow-box border-2 border-primary/30 shadow-lg"
+                  ? "glow-box border border-primary/25 shadow-md"
                   : "glow-border shadow-sm"
               }`}
             >
               {plan.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs font-bold px-4 py-1 rounded-full">
+                <div className="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-[10px] font-bold px-3 py-0.5 rounded-full">
                   {t("Most Popular", "Le Plus Populaire")}
                 </div>
               )}
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
-                <plan.icon size={24} className="text-primary" />
+              <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+                <plan.icon size={18} className="text-primary" />
               </div>
-              <h3 className="font-display text-xl font-bold">{plan.name}</h3>
-              <p className="text-muted-foreground text-sm mt-2 mb-6 flex-1">{plan.desc}</p>
+              <h3 className="font-display text-base font-bold">{plan.name}</h3>
+              <p className="text-muted-foreground text-xs mt-1.5 mb-4 flex-1 leading-relaxed">{plan.desc}</p>
               <button
                 onClick={() => navigate(`/offer/${plan.slug}`)}
-                className={`flex items-center justify-center gap-2 text-center py-3 rounded-xl font-semibold text-sm transition-all cursor-pointer ${
+                className={`flex items-center justify-center gap-1.5 text-center py-2 rounded-lg font-semibold text-xs transition-all cursor-pointer ${
                   plan.popular
                     ? "bg-primary text-primary-foreground hover:opacity-90"
-                    : "border border-primary/40 text-primary hover:bg-primary/10"
+                    : "border border-primary/30 text-primary hover:bg-primary/10"
                 }`}
               >
                 {t("See Details", "Voir les Détails")}
-                <ArrowRight size={16} />
+                <ArrowRight size={14} />
               </button>
             </motion.div>
           ))}

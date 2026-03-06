@@ -94,7 +94,7 @@ const OfferDetail = () => {
     "business-organization": {
       icon: Briefcase,
       image: businessImg,
-      name: t("Automated Business Organization & Follow-up", "Organisation Business Automatisée & Relances"),
+      name: t("Smart Business Organization & Follow-up", "Organisation Business Intelligente & Relances"),
       shortDesc: t(
         "Your business continues to run even when you are not available.",
         "Votre business continue de tourner même quand vous n'êtes pas disponible."
@@ -104,8 +104,8 @@ const OfferDetail = () => {
         "Gérer un petit business signifie jongler avec tout — demandes clients, relances, rendez-vous, factures. Des choses passent entre les mailles. Les clients ne reviennent pas parce que personne n'a fait de suivi. Vous perdez du chiffre d'affaires sans même vous en rendre compte."
       ),
       solution: t(
-        "We build a complete automated organization system that tracks every client interaction, sends follow-ups automatically, reminds you of important tasks, and gives you a clear view of your business operations — all without you lifting a finger.",
-        "Nous construisons un système d'organisation automatisé complet qui suit chaque interaction client, envoie des relances automatiquement, vous rappelle les tâches importantes et vous donne une vue claire de vos opérations — sans que vous leviez le petit doigt."
+        "We build a complete organization system that tracks every client interaction, sends follow-ups on time, reminds you of important tasks, and gives you a clear view of your business operations — all without you lifting a finger.",
+        "Nous construisons un système d'organisation complet qui suit chaque interaction client, envoie des relances à temps, vous rappelle les tâches importantes et vous donne une vue claire de vos opérations — sans que vous leviez le petit doigt."
       ),
       gains: [
         t("Clear organization of all requests", "Organisation claire de toutes les demandes"),

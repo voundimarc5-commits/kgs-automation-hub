@@ -65,7 +65,7 @@ const OfferDetail = () => {
       ],
       useCases: [
         { title: t("Hair Salon", "Salon de Coiffure"), desc: t("Clients ask about prices, availability, and services. The bot answers instantly and books appointments.", "Les clientes demandent les prix, la disponibilité et les services. Le bot répond instantanément et prend les rendez-vous.") },
-        { title: t("Restaurant", "Restaurant"), desc: t("Customers ask about the menu, opening hours, and reservations. Automation handles it all.", "Les clients demandent le menu, les horaires et les réservations. L'automatisation gère tout.") },
+        { title: t("Restaurant", "Restaurant"), desc: t("Customers ask about the menu, opening hours, and reservations. The system handles it all seamlessly.", "Les clients demandent le menu, les horaires et les réservations. Le système gère tout de manière fluide.") },
         { title: t("Freelance Service", "Service Freelance"), desc: t("Service providers receive quote requests and the system collects project details automatically.", "Les prestataires reçoivent des demandes de devis et le système collecte les détails du projet automatiquement.") },
       ],
       workflow: [

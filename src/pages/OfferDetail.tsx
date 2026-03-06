@@ -173,7 +173,7 @@ const OfferDetail = () => {
         t("Higher ratings and more bookings", "Meilleures notes et plus de réservations"),
       ],
       includes: [
-        t("Automated guest messaging (pre/during/post stay)", "Messagerie automatisée (avant/pendant/après séjour)"),
+        t("Smart guest messaging (pre/during/post stay)", "Messagerie intelligente (avant/pendant/après séjour)"),
         t("Digital check-in / check-out instructions", "Instructions numériques de check-in / check-out"),
         t("Property information & house rules system", "Système d'information et règlement de la propriété"),
         t("Incident and maintenance reporting", "Signalement d'incidents et de maintenance"),

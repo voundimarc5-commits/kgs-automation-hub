@@ -182,8 +182,8 @@ const OfferDetail = () => {
         t("Multi-property support", "Support multi-propriétés"),
       ],
       useCases: [
-        { title: t("Airbnb Host", "Hôte Airbnb"), desc: t("Guests get automatic check-in instructions, WiFi details, and local recommendations. Reviews are requested automatically after checkout.", "Les hôtes reçoivent automatiquement les instructions de check-in, les détails WiFi et les recommandations locales. Les avis sont demandés automatiquement après le départ.") },
-        { title: t("Short-term Rental Manager", "Gestionnaire de Location Courte Durée"), desc: t("Manage multiple properties with automated guest flows, cleaning schedules, and owner reports.", "Gérez plusieurs propriétés avec des flux automatisés, des plannings de ménage et des rapports propriétaires.") },
+        { title: t("Airbnb Host", "Hôte Airbnb"), desc: t("Guests get instant check-in instructions, WiFi details, and local recommendations. Reviews are requested after checkout.", "Les hôtes reçoivent les instructions de check-in, les détails WiFi et les recommandations locales. Les avis sont demandés après le départ.") },
+        { title: t("Short-term Rental Manager", "Gestionnaire de Location Courte Durée"), desc: t("Manage multiple properties with smart guest flows, cleaning schedules, and owner reports.", "Gérez plusieurs propriétés avec des flux intelligents, des plannings de ménage et des rapports propriétaires.") },
         { title: t("Diaspora Property Owner", "Propriétaire de la Diaspora"), desc: t("Own property in Africa but live abroad? The system handles day-to-day guest communication and sends you incident alerts.", "Vous possédez un bien en Afrique mais vivez à l'étranger ? Le système gère la communication quotidienne avec les hôtes et vous envoie des alertes en cas d'incident.") },
       ],
       workflow: [

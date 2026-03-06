@@ -130,7 +130,7 @@ const OfferDetail = () => {
       workflow: [
         t("A new request or task is created (manually or automatically)", "Une nouvelle demande ou tâche est créée (manuellement ou automatiquement)"),
         t("The system categorizes and prioritizes it", "Le système la catégorise et la priorise"),
-        t("Automatic follow-ups are scheduled", "Des relances automatiques sont programmées"),
+        t("Smart follow-ups are scheduled", "Des relances intelligentes sont programmées"),
         t("Reminders are sent before deadlines", "Des rappels sont envoyés avant les échéances"),
         t("You review a weekly summary of all activity", "Vous consultez un résumé hebdomadaire de toute l'activité"),
       ],

@@ -115,8 +115,8 @@ const OfferDetail = () => {
       ],
       includes: [
         t("Structured client request management", "Gestion structurée des demandes clients"),
-        t("Automatic follow-up sequences", "Séquences de relance automatiques"),
-        t("Automated reminders (appointments, payments, tasks)", "Rappels automatiques (rendez-vous, paiements, tâches)"),
+        t("Smart follow-up sequences", "Séquences de relance intelligentes"),
+        t("Scheduled reminders (appointments, payments, tasks)", "Rappels programmés (rendez-vous, paiements, tâches)"),
         t("Simple CRM system adapted to your business", "Système CRM simple adapté à votre activité"),
         t("Monthly activity and performance reporting", "Rapport d'activité et de performance mensuel"),
         t("Client satisfaction tracking", "Suivi de la satisfaction client"),

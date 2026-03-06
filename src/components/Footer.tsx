@@ -1,6 +1,7 @@
 import { useLang } from "@/contexts/LanguageContext";
 import logo from "@/assets/kgs-logo.png";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const { t } = useLang();
@@ -8,10 +9,10 @@ const Footer = () => {
   return (
     <footer className="bg-card border-t border-border pt-12 pb-6 px-4">
       <div className="container mx-auto max-w-6xl">
-        <div className="grid md:grid-cols-4 gap-8 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
           {/* About */}
-          <div className="md:col-span-2">
-            <img src={logo} alt="KGS Automations" className="h-10 mb-4" />
+          <div className="sm:col-span-2 lg:col-span-2">
+            <img src={logo} alt="KGS Automations" className="h-16 mb-4 animate-logo-pulse" />
             <p className="text-muted-foreground text-sm leading-relaxed max-w-md">
               {t(
                 "KGS Automations is part of Kora Global Systems — a technology group focused on structuring, securing, and operating African businesses remotely. Our mission: helping African businesses operate smoothly through simple automation systems.",
@@ -27,19 +28,19 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-center gap-2">
-                <Mail size={14} className="text-primary" />
-                <a href="mailto:contact@kgsautomations.com" className="hover:text-primary transition-colors">
-                  contact@kgsautomations.com
+                <Mail size={14} className="text-primary flex-shrink-0" />
+                <a href="mailto:contact@koraglobalsystems.com" className="hover:text-primary transition-colors break-all">
+                  contact@koraglobalsystems.com
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <Phone size={14} className="text-primary" />
+                <Phone size={14} className="text-primary flex-shrink-0" />
                 <a href="https://wa.me/message/YOUR_WHATSAPP_LINK" className="hover:text-primary transition-colors">
                   WhatsApp
                 </a>
               </li>
               <li className="flex items-start gap-2">
-                <MapPin size={14} className="text-primary mt-0.5" />
+                <MapPin size={14} className="text-primary mt-0.5 flex-shrink-0" />
                 <span>{t("Operating remotely across Africa", "Opérant à distance à travers l'Afrique")}</span>
               </li>
             </ul>
@@ -52,14 +53,19 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <Link to="/privacy" className="hover:text-primary transition-colors">
                   {t("Privacy Policy", "Politique de Confidentialité")}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <Link to="/terms" className="hover:text-primary transition-colors">
                   {t("Terms of Service", "Conditions d'Utilisation")}
-                </a>
+                </Link>
+              </li>
+              <li>
+                <Link to="/disclaimer" className="hover:text-primary transition-colors">
+                  {t("Disclaimer", "Avertissement")}
+                </Link>
               </li>
             </ul>
           </div>

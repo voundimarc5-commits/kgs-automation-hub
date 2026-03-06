@@ -200,7 +200,7 @@ const OfferDetail = () => {
         { icon: Shield, label: t("Manage from anywhere in the world", "Gérez depuis n'importe où dans le monde") },
       ],
       scenario: {
-        title: t("A guest's journey with automation", "Le parcours d'un hôte avec l'automatisation"),
+        title: t("A guest's journey with KGS", "Le parcours d'un hôte avec KGS"),
         before: t("Before: A guest arrives at 11 PM and can't find the key. They call you 3 times. You send manual instructions half-asleep. Bad review.", "Avant : Un hôte arrive à 23h et ne trouve pas la clé. Il vous appelle 3 fois. Vous envoyez des instructions manuellement à moitié endormi(e). Mauvais avis."),
         after: t("After: The guest received digital check-in instructions 24h before arrival with photos and a map. They found everything easily. 5-star review.", "Après : L'hôte a reçu les instructions de check-in numériques 24h avant l'arrivée avec photos et plan. Il a tout trouvé facilement. Avis 5 étoiles."),
       },

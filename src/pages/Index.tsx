@@ -6,6 +6,7 @@ import PricingSection from "@/components/PricingSection";
 import AboutSection from "@/components/AboutSection";
 import WhySection from "@/components/WhySection";
 import CTASection from "@/components/CTASection";
+import ExploreSection from "@/components/ExploreSection";
 import Footer from "@/components/Footer";
 import NetworkBackground from "@/components/NetworkBackground";
 
@@ -18,6 +19,7 @@ const Index = () => {
         <HeroSection />
         <ProblemSection />
         <SolutionSection />
+        <ExploreSection />
         <AboutSection />
         <PricingSection />
         <WhySection />

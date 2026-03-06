@@ -31,8 +31,8 @@ const HeroSection = () => {
 
           <p className="text-lg text-white/80 max-w-lg mb-8">
             {t(
-              "Simple automations that capture every client, organize your business, and keep things running — even when you're not available.",
-              "Des automatisations simples qui capturent chaque client, organisent votre business et gardent tout en marche — même quand vous n'êtes pas disponible."
+              "Smart solutions that capture every client, organize your business, and keep things running — even when you're not available.",
+              "Des solutions intelligentes qui capturent chaque client, organisent votre business et gardent tout en marche — même quand vous n'êtes pas disponible."
             )}
           </p>
 

@@ -39,6 +39,11 @@ const CTASection = () => {
           <p className="text-xs text-muted-foreground mt-3">
             {t("Free consultation • No commitment", "Consultation gratuite • Sans engagement")}
           </p>
+          <p className="text-xs text-muted-foreground mt-2">
+            <a href="mailto:contact@koraglobalsystems.com" className="hover:text-primary transition-colors">
+              contact@koraglobalsystems.com
+            </a>
+          </p>
         </motion.div>
       </div>
     </section>

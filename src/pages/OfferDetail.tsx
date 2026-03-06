@@ -82,9 +82,9 @@ const OfferDetail = () => {
         { icon: Shield, label: t("Never miss a message", "Ne ratez plus jamais un message") },
       ],
       scenario: {
-        title: t("A day with automation", "Une journée avec l'automatisation"),
+        title: t("A day with KGS", "Une journée avec KGS"),
         before: t("Before: You're braiding a client's hair. 15 WhatsApp messages come in. You can't reply. By evening, 5 potential clients have gone elsewhere.", "Avant : Vous êtes en train de coiffer une cliente. 15 messages WhatsApp arrivent. Vous ne pouvez pas répondre. Le soir, 5 clients potentiels sont allés ailleurs."),
-        after: t("After: While you work, the automation replies to all 15 messages, books 3 appointments, and sends you a clean summary. Zero stress.", "Après : Pendant que vous travaillez, l'automatisation répond aux 15 messages, prend 3 rendez-vous et vous envoie un résumé clair. Zéro stress."),
+        after: t("After: While you work, the system replies to all 15 messages, books 3 appointments, and sends you a clean summary. Zero stress.", "Après : Pendant que vous travaillez, le système répond aux 15 messages, prend 3 rendez-vous et vous envoie un résumé clair. Zéro stress."),
       },
       installation: "120€ – 250€",
       installationCfa: "≈ 78 000 – 164 000 FCFA",

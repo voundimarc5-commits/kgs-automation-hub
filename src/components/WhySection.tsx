@@ -18,8 +18,8 @@ const WhySection = () => {
       icon: Zap,
       title: t("Simple & Effective", "Simple & Efficace"),
       desc: t(
-        "No complicated software to learn. Our automations work in the tools you already use.",
-        "Pas de logiciel compliqué à apprendre. Nos automatisations fonctionnent dans les outils que vous utilisez déjà."
+        "No complicated software to learn. Our solutions work within the tools you already use.",
+        "Pas de logiciel compliqué à apprendre. Nos solutions fonctionnent dans les outils que vous utilisez déjà."
       ),
     },
     {

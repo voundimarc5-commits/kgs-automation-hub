@@ -1,7 +1,6 @@
 import { useLang } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
 import { MessageCircleX, Clock, FolderX } from "lucide-react";
-import restaurantImg from "@/assets/african-restaurant.jpg";
 
 const ProblemSection = () => {
   const { t } = useLang();
@@ -36,54 +35,39 @@ const ProblemSection = () => {
   return (
     <section id="problem" className="section-padding">
       <div className="container mx-auto max-w-5xl">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-8 text-center"
+        >
+          <span className="text-primary text-sm font-semibold uppercase tracking-wider">
+            {t("The Problem", "Le Problème")}
+          </span>
+          <h2 className="font-display text-3xl md:text-4xl font-bold mt-3">
+            {t("Your Business is Bleeding Clients", "Votre Business Perd des Clients")}
+          </h2>
+        </motion.div>
+
+        <div className="grid md:grid-cols-3 gap-4">
+          {problems.map((p, i) => (
             <motion.div
+              key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="mb-8"
+              transition={{ delay: i * 0.1 }}
+              className="flex flex-col gap-3 bg-card rounded-xl p-5 glow-border"
             >
-              <span className="text-primary text-sm font-semibold uppercase tracking-wider">
-                {t("The Problem", "Le Problème")}
-              </span>
-              <h2 className="font-display text-3xl md:text-4xl font-bold mt-3">
-                {t("Your Business is Bleeding Clients", "Votre Business Perd des Clients")}
-              </h2>
+              <div className="w-10 h-10 rounded-lg bg-destructive/10 flex items-center justify-center flex-shrink-0">
+                <p.icon size={20} className="text-destructive" />
+              </div>
+              <div>
+                <h3 className="font-display text-base font-semibold mb-1">{p.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{p.desc}</p>
+              </div>
             </motion.div>
-
-            <div className="space-y-4">
-              {problems.map((p, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="flex gap-4 bg-card rounded-xl p-5 glow-border"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-destructive/10 flex items-center justify-center flex-shrink-0">
-                    <p.icon size={20} className="text-destructive" />
-                  </div>
-                  <div>
-                    <h3 className="font-display text-base font-semibold mb-1">{p.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{p.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="hidden md:block"
-          >
-            <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img src={restaurantImg} alt={t("Busy African restaurant", "Restaurant africain occupé")} className="w-full h-80 object-cover" />
-            </div>
-          </motion.div>
+          ))}
         </div>
       </div>
     </section>

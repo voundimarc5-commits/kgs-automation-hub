@@ -131,17 +131,16 @@ const OfferDetail = () => {
           </button>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            {/* Hero */}
-            <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
-              <div>
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                  <Icon size={28} className="text-primary" />
+            {/* Hero banner with full-width image */}
+            <div className="relative rounded-2xl overflow-hidden mb-12">
+              <img src={offer.image} alt={offer.name} className="w-full h-72 md:h-96 object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[hsla(165,60%,10%,0.8)] via-[hsla(165,50%,12%,0.4)] to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
+                <div className="w-12 h-12 rounded-xl bg-primary/20 backdrop-blur-sm flex items-center justify-center mb-3">
+                  <Icon size={24} className="text-primary" />
                 </div>
-                <h1 className="font-display text-3xl md:text-4xl font-bold mb-4">{offer.name}</h1>
-                <p className="text-muted-foreground text-lg leading-relaxed">{offer.shortDesc}</p>
-              </div>
-              <div className="rounded-2xl overflow-hidden shadow-lg">
-                <img src={offer.image} alt={offer.name} className="w-full h-64 object-cover" />
+                <h1 className="font-display text-2xl md:text-4xl font-bold mb-2 text-white">{offer.name}</h1>
+                <p className="text-white/80 text-base md:text-lg leading-relaxed max-w-xl">{offer.shortDesc}</p>
               </div>
             </div>
 

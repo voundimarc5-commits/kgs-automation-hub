@@ -50,10 +50,10 @@ const PricingSection = () => {
           <span className="text-primary text-sm font-semibold uppercase tracking-wider">
             {t("Our Offers", "Nos Offres")}
           </span>
-          <h2 className="font-display text-3xl md:text-5xl font-bold mt-3">
+          <h2 className="font-display text-2xl md:text-3xl font-bold mt-2">
             {t("Choose Your Automation", "Choisissez Votre Automatisation")}
           </h2>
-          <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
+          <p className="text-muted-foreground text-sm mt-3 max-w-lg mx-auto">
             {t(
               "All plans include continuous improvement and dedicated support.",
               "Tous les plans incluent l'amélioration continue et un support dédié."

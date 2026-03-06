@@ -50,7 +50,7 @@ const OfferDetail = () => {
     },
     "business-organization": {
       icon: Briefcase,
-      image: restaurantImg,
+      image: businessImg,
       name: t("Automated Business Organization & Follow-up", "Organisation Business Automatisée & Relances"),
       shortDesc: t(
         "Your business continues to run even when you are not available.",

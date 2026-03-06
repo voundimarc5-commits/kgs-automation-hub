@@ -30,8 +30,12 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }} className="flex items-center gap-2">
+        <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }} className="flex items-center gap-3">
           <img src={logo} alt="KGS Automations" className="h-14 md:h-16 animate-logo-pulse" />
+          <div className="flex flex-col leading-tight">
+            <span className="text-lg md:text-xl font-bold text-primary">Automations</span>
+            <span className="text-[10px] md:text-xs text-muted-foreground tracking-wide">Kora Global Systems</span>
+          </div>
         </a>
 
         {/* Desktop */}

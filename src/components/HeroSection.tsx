@@ -21,7 +21,7 @@ const HeroSection = () => {
           transition={{ duration: 0.7 }}
           className="max-w-2xl"
         >
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-5 text-white">
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-5 text-white uppercase">
             {t("Stop Losing Clients", "Arrêtez de Perdre des Clients")}
             <br />
             <span className="text-primary">

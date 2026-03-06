@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import NetworkBackground from "@/components/NetworkBackground";
 
 import salonImg from "@/assets/african-salon.jpg";
-import restaurantImg from "@/assets/african-restaurant.jpg";
+import businessImg from "@/assets/african-restaurant.jpg";
 import airbnbImg from "@/assets/african-airbnb.jpg";
 
 const OfferDetail = () => {

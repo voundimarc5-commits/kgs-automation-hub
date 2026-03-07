@@ -23,13 +23,15 @@ const HeroSection = () => {
           className="max-w-2xl"
         >
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white/90 text-xs font-medium px-4 py-1.5 rounded-full mb-6 border border-white/10"
+            className="flex items-center gap-2 mb-6"
           >
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            {t("WhatsApp Automation for Africa", "Automatisation WhatsApp pour l'Afrique")}
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary" />
+            </span>
           </motion.div>
 
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-6 text-white uppercase">

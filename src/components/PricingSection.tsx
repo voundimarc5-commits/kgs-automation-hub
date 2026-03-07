@@ -1,6 +1,6 @@
 import { useLang } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
-import { MessageSquare, Briefcase, Home, ArrowRight } from "lucide-react";
+import { MessageSquare, Briefcase, Home, ArrowRight, Star } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const PricingSection = () => {
@@ -45,15 +45,15 @@ const PricingSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-8"
+          className="text-center mb-12"
         >
-          <span className="text-primary text-xs font-semibold uppercase tracking-wider">
+          <span className="inline-flex items-center gap-2 bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-4">
             {t("Our Offers", "Nos Offres")}
           </span>
           <h2 className="font-display text-2xl md:text-3xl font-bold mt-2">
             {t("Choose Your Solution", "Choisissez Votre Solution")}
           </h2>
-          <p className="text-muted-foreground text-sm mt-3 max-w-lg mx-auto">
+          <p className="text-muted-foreground text-sm mt-4 max-w-lg mx-auto leading-relaxed">
             {t(
               "All plans include continuous improvement and dedicated support.",
               "Tous les plans incluent l'amélioration continue et un support dédié."
@@ -61,40 +61,41 @@ const PricingSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-5 max-w-4xl mx-auto">
           {plans.map((plan, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className={`relative bg-card rounded-xl p-5 flex flex-col ${
+              className={`relative rounded-2xl p-6 flex flex-col transition-all duration-300 ${
                 plan.popular
-                  ? "glow-box border border-primary/25 shadow-md"
-                  : "glow-border shadow-sm"
+                  ? "bg-gradient-to-b from-primary/[0.06] to-primary/[0.02] border-2 border-primary/25 shadow-lg shadow-primary/10 scale-[1.03]"
+                  : "elevated-card"
               }`}
             >
               {plan.popular && (
-                <div className="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-[10px] font-bold px-3 py-0.5 rounded-full">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-[10px] font-bold px-4 py-1 rounded-full flex items-center gap-1 shadow-md">
+                  <Star size={10} fill="currentColor" />
                   {t("Most Popular", "Le Plus Populaire")}
                 </div>
               )}
-              <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
-                <plan.icon size={18} className="text-primary" />
+              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary/15 to-accent/10 flex items-center justify-center mb-4 shadow-sm">
+                <plan.icon size={20} className="text-primary" />
               </div>
-              <h3 className="font-display text-base font-bold">{plan.name}</h3>
-              <p className="text-muted-foreground text-xs mt-1.5 mb-4 flex-1 leading-relaxed">{plan.desc}</p>
+              <h3 className="font-display text-lg font-bold">{plan.name}</h3>
+              <p className="text-muted-foreground text-sm mt-2 mb-6 flex-1 leading-relaxed">{plan.desc}</p>
               <button
                 onClick={() => navigate(`/offer/${plan.slug}`)}
-                className={`flex items-center justify-center gap-1.5 text-center py-2 rounded-lg font-semibold text-xs transition-all cursor-pointer ${
+                className={`flex items-center justify-center gap-2 text-center py-3 rounded-xl font-semibold text-sm transition-all cursor-pointer ${
                   plan.popular
-                    ? "bg-primary text-primary-foreground hover:opacity-90"
-                    : "border border-primary/30 text-primary hover:bg-primary/10"
+                    ? "bg-primary text-primary-foreground hover:opacity-90 shadow-md shadow-primary/20"
+                    : "border border-primary/25 text-primary hover:bg-primary/5 hover:border-primary/40"
                 }`}
               >
                 {t("See Details", "Voir les Détails")}
-                <ArrowRight size={14} />
+                <ArrowRight size={15} />
               </button>
             </motion.div>
           ))}

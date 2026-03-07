@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useLang } from "@/contexts/LanguageContext";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, ArrowLeft, ChevronRight, Sparkles, MessageSquare, Briefcase, Home } from "lucide-react";
+import { ArrowRight, ArrowLeft, ChevronRight, Sparkles, MessageSquare, Briefcase, Home, Zap, CheckCircle2 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const questions = (t: (en: string, fr: string) => string) => [
@@ -53,7 +53,6 @@ const getRecommendation = (
 ): Recommendation => {
   const [businessType, goal] = answers;
 
-  // Property-related
   if (businessType === 3 || goal === 4) {
     return {
       slug: "property-management",
@@ -79,7 +78,6 @@ const getRecommendation = (
     };
   }
 
-  // Business organization (follow-ups, payments, booking)
   if (goal === 1 || goal === 2 || goal === 3) {
     return {
       slug: "business-organization",
@@ -105,7 +103,6 @@ const getRecommendation = (
     };
   }
 
-  // Default: messaging
   return {
     slug: "client-messaging",
     icon: MessageSquare,
@@ -133,7 +130,7 @@ const getRecommendation = (
 const ExploreSection = () => {
   const { t } = useLang();
   const navigate = useNavigate();
-  const [step, setStep] = useState(0); // 0,1,2 = questions; 3 = results
+  const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
   const allQuestions = questions(t);
 
@@ -163,21 +160,31 @@ const ExploreSection = () => {
   const RecIcon = recommendation?.icon ?? MessageSquare;
 
   return (
-    <section className="section-padding bg-muted/50">
-      <div className="container mx-auto max-w-3xl">
+    <section className="section-padding relative overflow-hidden">
+      {/* Decorative background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] via-transparent to-accent/[0.03]" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-primary/[0.04] blur-[120px] pointer-events-none" />
+
+      <div className="container mx-auto max-w-3xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-10"
+          className="text-center mb-12"
         >
-          <span className="text-primary text-sm font-semibold uppercase tracking-wider">
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-2 bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-4"
+          >
+            <Zap size={14} />
             {t("Interactive", "Interactif")}
-          </span>
-          <h2 className="font-display text-3xl md:text-4xl font-bold mt-3">
+          </motion.div>
+          <h2 className="font-display text-3xl md:text-4xl font-bold mt-2">
             {t("Explore Your Possibilities", "Explorez Vos Possibilités")}
           </h2>
-          <p className="text-muted-foreground mt-3 text-sm max-w-lg mx-auto">
+          <p className="text-muted-foreground mt-4 text-sm max-w-lg mx-auto leading-relaxed">
             {t(
               "Answer 3 quick questions and discover which solution fits your business best.",
               "Répondez à 3 questions rapides et découvrez quelle solution correspond le mieux à votre business."
@@ -187,14 +194,26 @@ const ExploreSection = () => {
 
         {/* Progress bar */}
         {step < 3 && (
-          <div className="flex items-center gap-2 mb-8 max-w-xs mx-auto">
+          <div className="flex items-center gap-3 mb-10 max-w-sm mx-auto">
             {[0, 1, 2].map((i) => (
-              <div
-                key={i}
-                className={`h-1.5 flex-1 rounded-full transition-all duration-300 ${
-                  i <= step ? "bg-primary" : "bg-border"
-                }`}
-              />
+              <div key={i} className="flex-1 flex flex-col items-center gap-1.5">
+                <div
+                  className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-500 ${
+                    i < step
+                      ? "bg-primary text-primary-foreground shadow-md"
+                      : i === step
+                      ? "bg-primary text-primary-foreground shadow-lg shadow-primary/30 scale-110"
+                      : "bg-muted text-muted-foreground"
+                  }`}
+                >
+                  {i < step ? <CheckCircle2 size={16} /> : i + 1}
+                </div>
+                <div
+                  className={`h-0.5 w-full rounded-full transition-all duration-500 ${
+                    i <= step ? "bg-primary" : "bg-border"
+                  }`}
+                />
+              </div>
             ))}
           </div>
         )}
@@ -204,20 +223,20 @@ const ExploreSection = () => {
           {step < 3 && (
             <motion.div
               key={`question-${step}`}
-              initial={{ opacity: 0, x: 40 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -40 }}
-              transition={{ duration: 0.3 }}
-              className="bg-card rounded-2xl p-8 glow-border shadow-sm"
+              initial={{ opacity: 0, x: 50, scale: 0.97 }}
+              animate={{ opacity: 1, x: 0, scale: 1 }}
+              exit={{ opacity: 0, x: -50, scale: 0.97 }}
+              transition={{ duration: 0.35, ease: "easeOut" }}
+              className="glass-card rounded-2xl p-8 md:p-10"
             >
-              <div className="flex items-center justify-between mb-6">
-                <p className="text-xs text-muted-foreground font-semibold uppercase tracking-wider">
+              <div className="flex items-center justify-between mb-8">
+                <p className="text-xs text-muted-foreground font-bold uppercase tracking-wider bg-muted px-3 py-1 rounded-full">
                   {t("Question", "Question")} {step + 1}/3
                 </p>
                 {step > 0 && (
                   <button
                     onClick={goBack}
-                    className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-primary transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors font-medium"
                   >
                     <ArrowLeft size={14} />
                     {t("Back", "Retour")}
@@ -225,22 +244,30 @@ const ExploreSection = () => {
                 )}
               </div>
 
-              <h3 className="font-display text-lg font-bold mb-6">
+              <h3 className="font-display text-xl md:text-2xl font-bold mb-8">
                 {allQuestions[step].question}
               </h3>
 
               <div className="grid sm:grid-cols-2 gap-3">
                 {allQuestions[step].options.map((option, i) => (
-                  <button
+                  <motion.button
                     key={i}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.05 }}
                     onClick={() => handleAnswer(i)}
-                    className="text-left bg-muted/50 hover:bg-primary/10 border border-border hover:border-primary/30 rounded-xl px-5 py-4 text-sm font-medium transition-all duration-200 cursor-pointer group"
+                    className="group text-left bg-background hover:bg-primary/5 border border-border hover:border-primary/30 rounded-xl px-5 py-4 text-sm font-medium transition-all duration-200 cursor-pointer hover:shadow-md"
                   >
-                    <span className="flex items-center justify-between">
-                      {option}
-                      <ChevronRight size={16} className="text-muted-foreground group-hover:text-primary transition-colors" />
+                    <span className="flex items-center justify-between gap-3">
+                      <span className="flex items-center gap-3">
+                        <span className="w-6 h-6 rounded-full bg-muted group-hover:bg-primary/10 flex items-center justify-center text-[10px] font-bold text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0">
+                          {String.fromCharCode(65 + i)}
+                        </span>
+                        {option}
+                      </span>
+                      <ChevronRight size={16} className="text-muted-foreground/50 group-hover:text-primary group-hover:translate-x-0.5 transition-all" />
                     </span>
-                  </button>
+                  </motion.button>
                 ))}
               </div>
             </motion.div>
@@ -253,14 +280,20 @@ const ExploreSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="space-y-6"
+              className="space-y-5"
             >
               {/* Recommendation header */}
-              <div className="bg-card rounded-2xl p-8 glow-border shadow-sm text-center">
-                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <Sparkles size={28} className="text-primary" />
-                </div>
-                <h3 className="font-display text-xl font-bold mb-2">
+              <div className="glass-card rounded-2xl p-8 md:p-10 text-center relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-accent to-primary" />
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+                  className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/15 to-accent/15 flex items-center justify-center mx-auto mb-5 shadow-lg shadow-primary/10"
+                >
+                  <Sparkles size={30} className="text-primary" />
+                </motion.div>
+                <h3 className="font-display text-2xl font-bold mb-3">
                   {t("Our Recommendation for You", "Notre Recommandation Pour Vous")}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed max-w-xl mx-auto">
@@ -269,23 +302,29 @@ const ExploreSection = () => {
               </div>
 
               {/* Flow visualization */}
-              <div className="bg-card rounded-2xl p-8 glow-border shadow-sm">
-                <h4 className="font-display text-base font-bold mb-6 text-center">
+              <div className="glass-card rounded-2xl p-8 md:p-10">
+                <h4 className="font-display text-lg font-bold mb-8 text-center">
                   {t("How It Works for You", "Comment Ça Fonctionne Pour Vous")}
                 </h4>
                 <div className="space-y-0">
                   {recommendation.flow.map((flowStep, i) => (
-                    <div key={i} className="flex items-start gap-4">
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.3 + i * 0.1 }}
+                      className="flex items-start gap-4"
+                    >
                       <div className="flex flex-col items-center">
-                        <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 text-xs font-bold text-primary border-2 border-primary/20">
+                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0 text-xs font-bold text-primary-foreground shadow-md shadow-primary/20">
                           {i + 1}
                         </div>
                         {i < recommendation.flow.length - 1 && (
-                          <div className="w-0.5 h-8 bg-primary/15" />
+                          <div className="w-0.5 h-8 bg-gradient-to-b from-primary/30 to-primary/5" />
                         )}
                       </div>
-                      <p className="text-sm text-secondary-foreground pt-2">{flowStep}</p>
-                    </div>
+                      <p className="text-sm text-secondary-foreground pt-2.5 font-medium">{flowStep}</p>
+                    </motion.div>
                   ))}
                 </div>
               </div>
@@ -293,35 +332,47 @@ const ExploreSection = () => {
               {/* Benefits */}
               <div className="grid grid-cols-2 gap-3">
                 {recommendation.benefits.map((benefit, i) => (
-                  <div key={i} className="bg-card rounded-xl p-5 text-center glow-border">
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.5 + i * 0.08 }}
+                    className="glass-card rounded-xl p-5 text-center group hover:border-primary/20 transition-all"
+                  >
+                    <CheckCircle2 size={18} className="text-primary mx-auto mb-2" />
                     <p className="text-xs font-semibold text-secondary-foreground">{benefit}</p>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
 
               {/* Recommended offer CTA */}
-              <div className="bg-primary/5 rounded-2xl p-8 border border-primary/15 text-center">
-                <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-3">
-                  <RecIcon size={22} className="text-primary" />
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7 }}
+                className="relative rounded-2xl p-8 md:p-10 text-center overflow-hidden bg-gradient-to-br from-primary/10 via-primary/5 to-accent/10 border border-primary/15"
+              >
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <RecIcon size={24} className="text-primary" />
                 </div>
-                <h4 className="font-display text-lg font-bold mb-1">{recommendation.name}</h4>
-                <p className="text-xs text-muted-foreground mb-5">
+                <h4 className="font-display text-xl font-bold mb-1">{recommendation.name}</h4>
+                <p className="text-xs text-muted-foreground mb-6">
                   {t("Recommended solution for your business", "Solution recommandée pour votre business")}
                 </p>
                 <button
                   onClick={() => navigate(`/offer/${recommendation.slug}`)}
-                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-xl text-sm font-bold hover:opacity-90 transition-opacity cursor-pointer"
+                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3.5 rounded-xl text-sm font-bold hover:opacity-90 transition-all cursor-pointer shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30"
                 >
                   {t("See Full Details", "Voir Tous les Détails")}
                   <ArrowRight size={16} />
                 </button>
-              </div>
+              </motion.div>
 
               {/* Restart */}
-              <div className="text-center">
+              <div className="text-center pt-2">
                 <button
                   onClick={reset}
-                  className="text-xs text-muted-foreground hover:text-primary transition-colors cursor-pointer underline"
+                  className="text-xs text-muted-foreground hover:text-primary transition-colors cursor-pointer underline underline-offset-4"
                 >
                   {t("Start over", "Recommencer")}
                 </button>

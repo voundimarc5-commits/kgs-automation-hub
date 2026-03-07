@@ -7,11 +7,12 @@ const HeroSection = () => {
   const { t } = useLang();
 
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[92vh] flex items-center overflow-hidden">
       {/* Full-width background image with dark green overlay */}
       <div className="absolute inset-0">
         <img src={heroImg} alt="" className="w-full h-full object-cover object-center" style={{ objectPosition: 'center 40%' }} />
-        <div className="absolute inset-0 bg-gradient-to-r from-[hsla(165,60%,10%,0.85)] via-[hsla(165,50%,12%,0.75)] to-[hsla(165,40%,15%,0.65)]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsla(165,60%,8%,0.9)] via-[hsla(165,50%,10%,0.8)] to-[hsla(165,40%,15%,0.65)]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[hsla(165,60%,8%,0.4)] to-transparent" />
       </div>
 
       <div className="container mx-auto relative z-10 max-w-6xl px-4 md:px-8 py-28">
@@ -21,7 +22,17 @@ const HeroSection = () => {
           transition={{ duration: 0.7 }}
           className="max-w-2xl"
         >
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-5 text-white uppercase">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3 }}
+            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white/90 text-xs font-medium px-4 py-1.5 rounded-full mb-6 border border-white/10"
+          >
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            {t("WhatsApp Automation for Africa", "Automatisation WhatsApp pour l'Afrique")}
+          </motion.div>
+
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-6 text-white uppercase">
             {t("Stop Losing Clients", "Arrêtez de Perdre des Clients")}
             <br />
             <span className="text-primary">
@@ -29,7 +40,7 @@ const HeroSection = () => {
             </span>
           </h1>
 
-          <p className="text-lg text-white/80 max-w-lg mb-8">
+          <p className="text-lg text-white/75 max-w-lg mb-8 leading-relaxed">
             {t(
               "Smart solutions that capture every client, organize your business, and keep things running — even when you're not available.",
               "Des solutions intelligentes qui capturent chaque client, organisent votre business et gardent tout en marche — même quand vous n'êtes pas disponible."
@@ -39,34 +50,37 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-3">
             <a
               href="#cta"
-              className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 rounded-xl text-sm font-semibold hover:opacity-90 transition-opacity glow-box"
+              className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl text-sm font-bold hover:opacity-90 transition-all shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40"
             >
               {t("Boost My Business", "Booster Mon Business")}
               <ArrowRight size={18} />
             </a>
             <a
               href="#solution"
-              className="inline-flex items-center justify-center gap-2 border border-white/30 text-white px-7 py-3.5 rounded-xl text-sm font-medium hover:bg-white/10 transition-colors"
+              className="inline-flex items-center justify-center gap-2 border border-white/20 text-white px-8 py-4 rounded-xl text-sm font-medium hover:bg-white/10 transition-all backdrop-blur-sm"
             >
               {t("See How It Works", "Voir Comment Ça Marche")}
             </a>
           </div>
 
           {/* Stats */}
-          <div className="mt-10 grid grid-cols-3 gap-4">
+          <div className="mt-12 grid grid-cols-3 gap-6">
             {[
               { num: "70%", label: t("clients lost to missed messages", "des clients perdus par messages manqués") },
               { num: "24/7", label: t("instant responses", "réponses instantanées") },
               { num: "5min", label: t("setup time", "temps de mise en place") },
             ].map((s) => (
               <div key={s.num} className="text-center">
-                <div className="text-xl md:text-2xl font-bold text-primary font-display">{s.num}</div>
-                <div className="text-xs text-white/60 mt-1">{s.label}</div>
+                <div className="text-2xl md:text-3xl font-bold text-primary font-display">{s.num}</div>
+                <div className="text-xs text-white/50 mt-1.5 leading-snug">{s.label}</div>
               </div>
             ))}
           </div>
         </motion.div>
       </div>
+
+      {/* Bottom fade */}
+      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
 };

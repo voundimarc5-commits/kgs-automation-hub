@@ -41,18 +41,19 @@ const WhySection = () => {
   ];
 
   return (
-    <section id="why" className="section-padding bg-muted/50">
-      <div className="container mx-auto max-w-5xl">
+    <section id="why" className="section-padding relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-muted/30 to-muted/60" />
+      <div className="container mx-auto max-w-5xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-14"
         >
-          <span className="text-primary text-sm font-semibold uppercase tracking-wider">
+          <span className="inline-flex items-center gap-2 bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-4">
             {t("Why KGS", "Pourquoi KGS")}
           </span>
-          <h2 className="font-display text-3xl md:text-4xl font-bold mt-3">
+          <h2 className="font-display text-3xl md:text-4xl font-bold mt-2">
             {t("Built Different", "Construit Différemment")}
           </h2>
         </motion.div>
@@ -61,17 +62,17 @@ const WhySection = () => {
           {reasons.map((r, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="flex gap-4 items-start bg-card rounded-xl p-6 glow-border shadow-sm"
+              className="glass-card-hover flex gap-5 items-start rounded-xl p-6"
             >
-              <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <r.icon size={20} className="text-primary" />
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/15 to-accent/10 flex items-center justify-center flex-shrink-0 shadow-sm">
+                <r.icon size={22} className="text-primary" />
               </div>
               <div>
-                <h3 className="font-display text-base font-semibold mb-1">{r.title}</h3>
+                <h3 className="font-display text-base font-semibold mb-1.5">{r.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{r.desc}</p>
               </div>
             </motion.div>
